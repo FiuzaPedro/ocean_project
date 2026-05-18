@@ -110,6 +110,8 @@ function initParallax() {
                 
 
         if (hero) {
+            console.log("test");
+            
             hero.style.transform = `translateY(${rate}px)`;
         }
     });

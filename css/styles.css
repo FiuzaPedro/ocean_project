@@ -21,22 +21,26 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(180deg, var(--ocean-dark) 0%, var(--ocean-deep) 50%, var(--ocean-blue) 100%);
+    background:  
+        url('../img/quadromadre.jpg') no-repeat top center,
+        linear-gradient(180deg, var(--ocean-dark) 0%, var(--ocean-deep) 50%, var(--ocean-blue) 100%);    
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--ocean-white);
     min-height: 100vh;
     line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding: 0 1px;
 }
 
 /* Header Styles */
-header {
+header {    
     background: rgba(10, 22, 40, 0.9);
-    background: var(--ocean-foam);
+    background: var(--ocean-blue);
     opacity: 0.9;
     padding: 20px 10px;
     text-align: center;
@@ -49,7 +53,7 @@ header {
 }
 
 header h1 {
-    color: var(--ocean-cyan);    
+    color: var(--ocean-white);    
     font-size: 2.5rem;
     text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
 }
@@ -97,19 +101,18 @@ main {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 80px 20px;    
-    background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, rgba(45, 106, 159, 0.2) 100%);
-    background-image: url('../img/quadromadre.jpg');
-    background-position: center center;
+    padding: 40px 10px;
+    margin: auto 40px 40px;    
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.5) 0%, rgba(45, 106, 159, 0.6) 100%);    
     border-radius: 20px;
-    margin-bottom: 40px;
+    
     border: 1px solid rgba(0, 188, 212, 0.3);
     ul {
         margin: 2% auto;
         width: 50%;
         list-style: none;
-        background-color: var(--ocean-white);
-        color: var(--ocean-cyan);
+        background-color: var(--ocean-cyan);
+        color: var(--ocean-foam);
         border-radius: 5px;
         li {padding: 10px; font-weight: bold; font-size: 1.1em;}
         
@@ -119,7 +122,8 @@ main {
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: var(--ocean-cyan);
+    color: var(--ocean-foam);
+    /* background-color: var(--ocean-cyan); */
     text-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
 }
 
@@ -129,6 +133,11 @@ main {
     color: var(--ocean-foam);
 }
 
+.statement-card {
+    background-color: var(--ocean-deep);
+    padding: 5%;
+    margin: 100px 0 50px;
+}
 .cta-button {
     background: linear-gradient(135deg, var(--ocean-cyan) 0%, var(--ocean-teal) 100%);
     color: var(--ocean-white);
@@ -215,7 +224,16 @@ footer p {
     .hero p {
         font-size: 1.1rem;
     }
-    
+    ul {
+        margin: 2% auto;
+        width: auto; 
+        
+    }
+    .statement-card {
+        h1 {
+            font-size: 1.5em;
+        }
+    }
     .features {
         grid-template-columns: 1fr;
     }
