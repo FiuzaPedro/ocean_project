@@ -1,0 +1,236 @@
+/* Ocean Theme CSS */
+:root {
+    --ocean-dark: #0a1628;
+    --ocean-deep: #1a3a5c;
+    --ocean-blue: #2d6a9f;
+    --ocean-light: #4a90c2;
+    --ocean-cyan: #00bcd4;
+    --ocean-teal: #008080;
+    --ocean-foam: #e0f7fa;
+    --ocean-sand: #f5f5dc;
+    --ocean-coral: #ff7f50;
+    --ocean-white: #ffffff;
+    --ocean-gray: #b0bec5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, var(--ocean-dark) 0%, var(--ocean-deep) 50%, var(--ocean-blue) 100%);
+    color: var(--ocean-white);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1px;
+}
+
+/* Header Styles */
+header {
+    background: rgba(10, 22, 40, 0.9);
+    background: var(--ocean-foam);
+    opacity: 0.9;
+    padding: 20px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--ocean-cyan);
+    transition: .5s ease-in-out opacity;
+}
+
+header h1 {
+    color: var(--ocean-cyan);    
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: var(--ocean-white);
+    color: var(--ocean-blue);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--ocean-cyan);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--ocean-cyan);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;    
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, rgba(45, 106, 159, 0.2) 100%);
+    background-image: url('../img/quadromadre.jpg');
+    background-position: center center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    ul {
+        margin: 2% auto;
+        width: 50%;
+        list-style: none;
+        background-color: var(--ocean-white);
+        color: var(--ocean-cyan);
+        border-radius: 5px;
+        li {padding: 10px; font-weight: bold; font-size: 1.1em;}
+        
+    }
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--ocean-cyan);
+    text-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: var(--ocean-foam);
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--ocean-cyan) 0%, var(--ocean-teal) 100%);
+    color: var(--ocean-white);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.6);
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: rgba(26, 58, 92, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 188, 212, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--ocean-cyan);
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+}
+
+.feature-card h3 {
+    color: var(--ocean-cyan);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--ocean-foam);
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 22, 40, 0.95);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 2px solid var(--ocean-cyan);
+}
+
+footer p {
+    color: var(--ocean-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Wave Animation */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero {
+    animation: wave 3s ease-in-out infinite;
+}
