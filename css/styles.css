@@ -40,7 +40,10 @@ body {
 }
 
 /* Header Styles */
-header {    
+header {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
     background: rgba(10, 22, 40, 0.9);
     background: var(--ocean-blue);
     opacity: 0.9;
@@ -106,15 +109,15 @@ main {
     padding: 40px 0px;
     margin: auto 40px 40px;    
     background: linear-gradient(135deg, rgba(0, 188, 212, 0.5) 0%, rgba(45, 106, 159, 0.6) 100%);    
-    border-radius: 20px;
-    
+    border-radius: 20px;    
     border: 1px solid rgba(0, 188, 212, 0.3);
     ul {
-        margin: 2% auto;
-        width: 50%;
+        margin: 2% 0;
+        width: 100%;
+        text-align: left;
         list-style: none;
         background-color: var(--ocean-cyan);
-        color: var(--ocean-foam);
+        color: var(--ocean-white);
         border-radius: 5px;
         li {padding: 10px; font-weight: bold; font-size: 1.1em;}
         
@@ -130,13 +133,14 @@ main {
 }
 .hero p {font-size: 1.3rem; margin-bottom: 30px;}
 .terra {    
-    color: var(--ocean-coral);    
+    color: var(--ocean-white);    
     background-color: black;
     background-image: url('../img/terra.png');
     background-size: 15%;
     background-position: 100px 10px;    
+    background-position: center center;
     text-transform: uppercase;
-    text-shadow: 7px 3px 5px var(--ocean-coral);
+    text-shadow: 7px 3px 5px var(--ocean-light);
     font-weight: bold;
     height: 200px;
     display: flex;    
@@ -233,14 +237,19 @@ footer p {
     .hero h2 {
         font-size: 2rem;
     }
-    
+    .hero ul li {
+        font-size: 14px;
+    }
     .hero p {
         font-size: 1.1rem;
     }
     ul {
         margin: 2% auto;
-        width: auto; 
-        
+        width: auto;        
+    }
+    .terra {
+        background-size: 50%;
+        font-size: 1em;
     }
     .statement-card {
         h1 {

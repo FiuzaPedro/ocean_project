@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oceano: A sua poluição</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/slides.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Oceanos</h1>
+            <i style="font-size: 2em;" class="fa-solid fa-water"></i>
+            <h1>Oceanos</h1>            
             <!-- <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -30,10 +29,10 @@
                 <h2>Poluição nos Oceanos</h2>
                 <p class="terra">O oceano cobre cerca de 70% da superfície da terra!</p>
                 <ul>
-                    <li>Alberga 98% das espécies do planeta</li>
-                    <li>Regula o clima do planeta</li>
-                    <li>Fornece alimentos</li>
-                    <li>Viabiliza vários serviços essenciais (Transportes, lazer, etc)</li>
+                    <li><i class="fa-solid fa-fish-fins"></i> Alberga 98% das espécies do planeta</li>
+                    <li><i class="fa-solid fa-cloud"></i> Regula o clima do planeta</li>
+                    <li><i class="fa-solid fa-shrimp"></i> Fornece alimentos</li>
+                    <li><i class="fa-solid fa-sailboat"></i> Viabiliza vários serviços essenciais (Transportes, lazer, etc)</li>
                 </ul>
                 <div class="statement-card">
                     <h1>Mas a humanidade tem visto o oceano principalmente como um bom e grande vazadouro  de lixo</h1>
@@ -45,8 +44,12 @@
             
             <section class="polution-info">
                 <div class="arrow-wrapper">
-                    <button id="left" class="left" disabled onclick="animateSlide(this)">&lArr; Anterior</button>
-                    <button id="right" class="right" onclick="animateSlide(this)">Seguinte &rArr;</button>
+                    <button id="left" class="left" disabled onclick="animateSlide(this)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="right" class="right" onclick="animateSlide(this)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
                 <div class="slides-container" >                    
                     <div class="slide">1</div>
@@ -98,5 +101,7 @@
     </div> <!--end container-->
     
     <script src="./script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/conflict-detection.min.js" integrity="sha512-9a/O7xs5VCV2iW8dxl1fxKmsE78LxTWxdWHbGF+k/lbPJAXAF1fCfPYb/GyoqpiaKfGjicH8SlLJkhyQMN+7SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

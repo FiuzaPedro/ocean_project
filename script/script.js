@@ -108,8 +108,10 @@ function initParallax() {
         const header = document.querySelector('header');
         if (scrolled > header.offsetHeight) {
             header.style.opacity = 0;
+            header.style.zIndex = -1;
         } else {
             header.style.opacity = 1;
+            header.style.zIndex = 1000;
         }
                 
 
@@ -133,23 +135,22 @@ function animateSlide(container) {
         if (slide.classList.contains('active')) {
             currentIndex = index;
         }
-    });
+    });   
     
-    // Calculate next slide index
-    nextIndex = (currentIndex + 1) % slides.length;
-    leftArrow.disabled = false;
     
     if(currentIndex === slides.length) {
         nextIndex = 0;
         currentIndex = 0;
     }
-    if(currentIndex === 1)  {
-        leftArrow.disabled = true;
-    }
+    
     if(container.classList.contains('left') ) {
         // Calculate previous slide index
         nextIndex = (currentIndex - 1);    
-    }    
+    } else {
+        // Calculate next slide index
+        nextIndex = (currentIndex + 1) % slides.length;
+        leftArrow.disabled = false;
+    }   
     
     console.log(nextIndex);
     // Fade out current slide
@@ -176,6 +177,10 @@ function animateSlide(container) {
             inline: 'center'
         });
     }, 700);
+
+    if(nextIndex < 1)  {
+        leftArrow.disabled = true;
+    }
 }
 
 // Initialize slides with first slide active
