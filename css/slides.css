@@ -1,35 +1,37 @@
 /* Ocean Theme CSS */
 :root {
-    --ocean-dark: #0a1628;
-    --ocean-deep: #1a3a5c;
-    --ocean-blue: #2d6a9f;
-    --ocean-light: #4a90c2;
-    --ocean-cyan: #00bcd4;
-    --ocean-teal: #008080;
-    --ocean-foam: #e0f7fa;
-    --ocean-sand: #f5f5dc;
-    --ocean-coral: #ff7f50;
-    --ocean-white: #ffffff;
-    --ocean-gray: #b0bec5;
+  --ocean-dark: #0a1628;
+  --ocean-deep: #1a3a5c;
+  --ocean-blue: #2d6a9f;
+  --ocean-light: #4a90c2;
+  --ocean-cyan: #00bcd4;
+  --ocean-teal: #008080;
+  --ocean-foam: #e0f7fa;
+  --ocean-sand: #f5f5dc;
+  --ocean-coral: #ff7f50;
+  --ocean-white: #ffffff;
+  --ocean-gray: #b0bec5;
 }
 /* polution-info, slides-container, slide -> classes*/
 .polution-info {
-    display: flex;
-    
+  display: flex;
+  flex-direction: column;
+  width: 100vw; 
 }
 .slides-container {
-    width: 100vw;    
-    height: 100vh;
-    padding: 20px;
-    display: flex;
-    gap: 4vw;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scrollbar-color: var(--ocean-cyan) var(--ocean-deep);
-    
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  /* padding: 20px; */
+  display: flex;
+  gap: 4vw;
+  /* overflow-x: scroll;
+  scroll-snap-type: x mandatory; */
+  overflow: hidden;
+  scrollbar-color: var(--ocean-cyan) var(--ocean-deep);
 }
 
-.slides-container::scroll-button(*) {
+/* .slides-container::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
@@ -77,26 +79,90 @@
   bottom: calc(anchor(bottom) + 50vh);
 }
 @media screen and (max-width: 850px) {
-    .slides-container::scroll-button(left) {
-        right: calc(anchor(left) - 15vw);
-        bottom: calc(anchor(bottom) + 50vh);
-    }
-    .slides-container::scroll-button(right) {
-        left: calc(anchor(right) - 15vw);
-        bottom: calc(anchor(bottom) + 50vh);
-    }
-}
-
+  .slides-container::scroll-button(left) {
+    right: calc(anchor(left) - 15vw);
+    bottom: calc(anchor(bottom) + 50vh);
+  }
+  .slides-container::scroll-button(right) {
+    left: calc(anchor(right) - 15vw);
+    bottom: calc(anchor(bottom) + 50vh);
+  }
+} */
 
 .slide {
-    transition: 0.7s ease-in-out all;
-    list-style-type: none;
-    background-color: #eeeeee;
-    /* border: 1px solid #dddddd; */
-    padding: 20px;
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-    /* &:nth-child(even) { */
-        background-color: var(--ocean-deep);
-    /* } */
+  transition: 0.7s ease-in-out all;
+  list-style-type: none;
+  background-color: #eeeeee;
+  /* border: 1px solid #dddddd; */
+  padding: 20px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  /* &:nth-child(even) { */
+  background-color: var(--ocean-deep);
+  /* } */
+
+  /* Fade in/out effects */
+  opacity: 0.3;
+  transform: scale(0.95);
 }
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 10px 40px rgba(0, 188, 212, 0.4);
+  border: 2px solid var(--ocean-cyan);
+}
+
+.slide.fade-in {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.slide.fade-out {
+  animation: fadeOut 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+}
+
+.arrow-wrapper {
+  display: flex; justify-content: space-around;
+  background-color: var(--ocean-cyan);  
+  z-index: 999;
+  height: 50px;
+}
+.left, .right {  
+  border: 0;
+  font-size: 1.5rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  color: var(--ocean-sand);
+  left: 100px;
+  z-index: 999;  
+  transition: .5s ease-in-out all;
+  padding: 0 10px;
+  &:hover {
+    background-color: var(--ocean-dark);
+  }
+}
+

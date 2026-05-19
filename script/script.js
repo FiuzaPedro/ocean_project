@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initButtons();
     initScrollEffects();
     initFeatureCards();
+    initSlides();
 });
 
 // Navigation functionality
@@ -121,10 +122,77 @@ function initParallax() {
 // Initialize parallax effect
 initParallax();
 
-function animateSlide(current) {
-    let btnclicked = current;
-    alert(btnclicked)
+function animateSlide(container) {    
+    let slides = document.querySelectorAll('.slide');    
+    let leftArrow = document.getElementById('left');
+    let currentIndex = 0;
+    let nextIndex;    
+    
+    // Find current active slide
+    slides.forEach((slide, index) => {
+        if (slide.classList.contains('active')) {
+            currentIndex = index;
+        }
+    });
+    
+    // Calculate next slide index
+    nextIndex = (currentIndex + 1) % slides.length;
+    leftArrow.disabled = false;
+    
+    if(currentIndex === slides.length) {
+        nextIndex = 0;
+        currentIndex = 0;
+    }
+    if(currentIndex === 1)  {
+        leftArrow.disabled = true;
+    }
+    if(container.classList.contains('left') ) {
+        // Calculate previous slide index
+        nextIndex = (currentIndex - 1);    
+    }    
+    
+    console.log(nextIndex);
+    // Fade out current slide
+    const currentSlide = slides[currentIndex];
+    currentSlide.classList.add('fade-out');
+    currentSlide.classList.remove('active');
+    
+    // Wait for fade out animation to complete, then fade in next slide
+    setTimeout(() => {
+        currentSlide.classList.remove('fade-out');
+        
+        const nextSlide = slides[nextIndex];
+        nextSlide.classList.add('fade-in', 'active');
+        
+        // Remove fade-in class after animation completes
+        setTimeout(() => {
+            nextSlide.classList.remove('fade-in');
+        }, 700);
+        
+        // Scroll to the next slide
+        nextSlide.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
+    }, 700);
 }
+
+// Initialize slides with first slide active
+function initSlides() {
+    const slidesContainer = document.querySelector('.slides-container');
+    if (slidesContainer) {
+        const slides = slidesContainer.querySelectorAll('.slide');
+        if (slides.length > 0) {
+            slides[0].classList.add('active');
+        }
+    }
+}
+
+// Call initSlides when DOM is loaded
+// document.addEventListener('DOMContentLoaded', function() {
+    
+// });
 
 
 // Console welcome message
