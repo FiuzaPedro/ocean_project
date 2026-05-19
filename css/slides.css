@@ -1,0 +1,102 @@
+/* Ocean Theme CSS */
+:root {
+    --ocean-dark: #0a1628;
+    --ocean-deep: #1a3a5c;
+    --ocean-blue: #2d6a9f;
+    --ocean-light: #4a90c2;
+    --ocean-cyan: #00bcd4;
+    --ocean-teal: #008080;
+    --ocean-foam: #e0f7fa;
+    --ocean-sand: #f5f5dc;
+    --ocean-coral: #ff7f50;
+    --ocean-white: #ffffff;
+    --ocean-gray: #b0bec5;
+}
+/* polution-info, slides-container, slide -> classes*/
+.polution-info {
+    display: flex;
+    
+}
+.slides-container {
+    width: 100vw;    
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    gap: 4vw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: var(--ocean-cyan) var(--ocean-deep);
+    
+}
+
+.slides-container::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.slides-container::scroll-button(*):hover,
+.slides-container::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.slides-container::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.slides-container::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+.slides-container::scroll-button(left) {
+  content: "◄" / "Previous";
+  color: var(--ocean-sand);
+}
+
+.slides-container::scroll-button(right) {
+  content: "►" / "Next";
+  color: var(--ocean-sand);
+}
+.slides-container {
+  anchor-name: --my-carousel;
+}
+
+.slides-container::scroll-button(*) {
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+.slides-container::scroll-button(left) {
+  right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(bottom) + 50vh);
+}
+.slides-container::scroll-button(right) {
+  left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(bottom) + 50vh);
+}
+@media screen and (max-width: 850px) {
+    .slides-container::scroll-button(left) {
+        right: calc(anchor(left) - 15vw);
+        bottom: calc(anchor(bottom) + 50vh);
+    }
+    .slides-container::scroll-button(right) {
+        left: calc(anchor(right) - 15vw);
+        bottom: calc(anchor(bottom) + 50vh);
+    }
+}
+
+
+.slide {
+    transition: 0.7s ease-in-out all;
+    list-style-type: none;
+    background-color: #eeeeee;
+    /* border: 1px solid #dddddd; */
+    padding: 20px;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    /* &:nth-child(even) { */
+        background-color: var(--ocean-deep);
+    /* } */
+}

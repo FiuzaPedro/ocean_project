@@ -33,6 +33,8 @@ body {
 
 .container {
     /* max-width: 1200px; */
+    container-type: scroll-state;
+    container-name: scroller;
     margin: 0 auto;
     padding: 0 1px;
 }
@@ -101,7 +103,7 @@ main {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 40px 10px;
+    padding: 40px 0px;
     margin: auto 40px 40px;    
     background: linear-gradient(135deg, rgba(0, 188, 212, 0.5) 0%, rgba(45, 106, 159, 0.6) 100%);    
     border-radius: 20px;
@@ -122,15 +124,25 @@ main {
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: var(--ocean-foam);
+    color: var(--ocean-sand);
     /* background-color: var(--ocean-cyan); */
     text-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
 }
-
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    color: var(--ocean-foam);
+.hero p {font-size: 1.3rem; margin-bottom: 30px;}
+.terra {    
+    color: var(--ocean-coral);    
+    background-color: black;
+    background-image: url('../img/terra.png');
+    background-size: 15%;
+    background-position: 100px 10px;    
+    text-transform: uppercase;
+    text-shadow: 7px 3px 5px var(--ocean-coral);
+    font-weight: bold;
+    height: 200px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
 .statement-card {
@@ -272,7 +284,7 @@ footer {
     background: var(--ocean-deep);
     & .wave {
         position: absolute;
-        top: 30px;
+        top: 40px;
         width: 100%;
         height: 100px;
         background: url('../img/wave.png');
@@ -308,5 +320,25 @@ footer {
     }
     100% {
         background-position: 1000px;
+    }
+}
+
+
+
+.back-to-top {
+    position: fixed; 
+    bottom: 10px; left: 90%;padding: 10px;
+    opacity: 0;
+    z-index: 9999; 
+    font-size: 2em;
+    width: 70px;
+    background-color: var(--ocean-cyan); color: var(--ocean-sand);box-shadow: 0px 0px 10px var(--ocean-cyan);
+    border: 0; border-radius: 100%;
+    transition: .5s linear all;
+    &:focus {border: none; outline: none;}
+    &:hover {
+        background-color: var(--ocean-sand); box-shadow: 0px 0px 10px var(--ocean-sand);
+        color: var(--ocean-cyan);
+        cursor: pointer;
     }
 }

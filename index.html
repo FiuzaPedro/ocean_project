@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oceano: A sua poluição</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slides.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
     <div class="container">
@@ -23,7 +28,7 @@
         <main>
             <section class="hero">
                 <h2>Poluição nos Oceanos</h2>
-                <p>O oceano cobre cerca de 70% da superfície da terra!</p>
+                <p class="terra">O oceano cobre cerca de 70% da superfície da terra!</p>
                 <ul>
                     <li>Alberga 98% das espécies do planeta</li>
                     <li>Regula o clima do planeta</li>
@@ -34,11 +39,32 @@
                     <h1>Mas a humanidade tem visto o oceano principalmente como um bom e grande vazadouro  de lixo</h1>
                     <p>(80% da poluição dos oceanos vem dos continentes, nomeadamente das zonas costeiras)
 </p>
-<button class="cta-button">Dive In</button>
-                </div>
-                
+                    <button class="cta-button">Exemplos</button>
+                </div>                
             </section>
             
+            <section class="polution-info">
+                <div class="slides-container" onclick="animateSlide(this)">
+                    <div class="slide animate__animated">1</div>
+                    <div class="slide animate__animated">2</div>
+                    <div class="slide animate__animated">3</div>
+                    <div class="slide animate__animated">4</div>
+                    <div class="slide animate__animated">5</div>
+                    <div class="slide animate__animated">6</div>
+                    <div class="slide animate__animated">7</div>
+                    <div class="slide animate__animated">8</div>
+                    <div class="slide animate__animated">9</div>
+                    <div class="slide animate__animated">10</div>
+                    <div class="slide animate__animated">11</div>
+                    <div class="slide animate__animated">12</div>
+                    <div class="slide animate__animated">13</div>
+                    <div class="slide animate__animated">14</div>
+                </div>
+            </section>
+
+
+
+
             <section class="features">
                 <div class="feature-card">
                     <h3>Deep Blue</h3>
@@ -64,7 +90,8 @@
             </div>
             <p>&copy; 2026 Pedro Fiúza Web Developer</p>
         </footer>
-    </div>
+    <button class="back-to-top" onclick="window.scrollTo(0, 0);">&uparrow;</button>
+    </div> <!--end container-->
     
     <script src="./script/script.js"></script>
 </body>

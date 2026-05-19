@@ -2,7 +2,7 @@
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Ocean theme loaded successfully');
+    // console.log('Ocean theme loaded successfully');
     
     // Initialize all functions
     initNavigation();
@@ -52,12 +52,15 @@ function initScrollEffects() {
     
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
+        let topBtn = document.querySelector('.back-to-top');
         
         // Add shadow to header on scroll
         if (currentScroll > 50) {
             header.style.boxShadow = '0 4px 20px rgba(0, 188, 212, 0.3)';
+            topBtn.style.opacity =1;
         } else {
             header.style.boxShadow = 'none';
+            topBtn.style.opacity = 0;
         }
         
         lastScroll = currentScroll;
@@ -81,7 +84,7 @@ function initFeatureCards() {
         
         // Add hover sound effect simulation
         card.addEventListener('mouseenter', function() {
-            console.log(`Hovering over feature ${index + 1}`);
+            // console.log(`Hovering over feature ${index + 1}`);
         });
     });
 }
@@ -110,8 +113,6 @@ function initParallax() {
                 
 
         if (hero) {
-            console.log("test");
-            
             hero.style.transform = `translateY(${rate}px)`;
         }
     });
@@ -119,6 +120,12 @@ function initParallax() {
 
 // Initialize parallax effect
 initParallax();
+
+function animateSlide(current) {
+    let btnclicked = current;
+    alert(btnclicked)
+}
+
 
 // Console welcome message
 // console.log('%c🌊 Ocean Theme', 'color: #00bcd4; font-size: 24px; font-weight: bold;');
