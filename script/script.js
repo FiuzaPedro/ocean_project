@@ -152,7 +152,7 @@ function animateSlide(container) {
         leftArrow.disabled = false;
     }   
     
-    console.log(nextIndex);
+    // console.log(nextIndex);
     // Fade out current slide
     const currentSlide = slides[currentIndex];
     currentSlide.classList.add('fade-out');
