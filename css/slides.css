@@ -23,7 +23,6 @@
   position: relative;
   /* width: 100vw; */
   /* height: 90vh; */
-
   /* padding: 20px; */
   display: flex;
   gap: 4vw;
@@ -154,7 +153,7 @@
   position: absolute;  
   z-index: 999;
   height: 50px;
-  top: 30%;
+  top: 25%;
 }
 .left, .right {  
   position: absolute;
@@ -266,6 +265,10 @@ li div {
 
 /* slide 9 */
 .slide9-img-wrapper {  
-  margin-top: 2%;
-  display: flex;flex-direction: column;  gap: 10px;
+  margin-top: 2%;  
+}
+@media screen and (max-width: 850px) {
+  .slide9-img-wrapper  {
+    display: flex;flex-direction: column;  gap: 10px;
+  }
 }
