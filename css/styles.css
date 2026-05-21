@@ -142,7 +142,7 @@ main {
     text-transform: uppercase;
     text-shadow: 7px 3px 5px var(--ocean-light);
     font-weight: bold;
-    height: 200px;
+    height: 80vh;
     display: flex;    
     justify-content: center;
     align-items: center;
@@ -250,6 +250,7 @@ footer p {
     .terra {
         background-size: 50%;
         font-size: 1em;
+        height: 40vh;
     }
     .statement-card {
         h1 {
@@ -349,5 +350,10 @@ footer {
         background-color: var(--ocean-sand); box-shadow: 0px 0px 10px var(--ocean-sand);
         color: var(--ocean-cyan);
         cursor: pointer;
+    }
+}
+@media screen and (max-width:850px) {
+    .back-to-top {
+        bottom: 10px; left: 0;padding: 10px;
     }
 }
