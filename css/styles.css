@@ -183,7 +183,7 @@ main {
     margin-top: 40px;
 }
 
-.feature-card {
+.feature-card {    
     background: rgba(26, 58, 92, 0.6);
     padding: 30px;
     border-radius: 15px;
@@ -349,11 +349,74 @@ footer {
     &:hover {
         background-color: var(--ocean-sand); box-shadow: 0px 0px 10px var(--ocean-sand);
         color: var(--ocean-cyan);
-        cursor: pointer;
+        cursor: pointer;        
     }
 }
 @media screen and (max-width:850px) {
     .back-to-top {
-        bottom: 10px; left: 0;padding: 10px;
+        bottom: 20px; left: 70%;padding: 10px; z-index: 9999999999999;
+        font-size: 1.5em;
+        width: 50px;
+        opacity: 1;
     }
 }
+
+/* modal exemplo de poluições */
+.modal-pollution { z-index: -1; opacity: 0; transition: .6s ease-in-out all;
+height: 0; width: 0; top: 0; left: 0; border: 2px ridge lightslategray;}
+.active-modal  {
+    opacity: 1;
+    z-index: 1000000;
+    position: fixed;    
+    background-color: rgba(10, 22, 40, 0.9); /*fallback*/
+    background: rgba(26, 58, 92, 0.6);
+    border-radius: 5px;
+    top: 2px;
+    left: 10%;
+    width: 80%;
+    height: 500px;
+    margin: 1% auto;    
+    backdrop-filter: blur(50px);
+    ul {        
+        li {display: flex;}
+    }
+    h2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--ocean-foam);
+        background-color: var(--ocean-dark);
+        padding-right: 10px; padding-left: 10px;
+        #close-btn {     
+            z-index: 10000001;       
+            background-color: lightslategray    ;
+            border-radius: 999em;
+            padding: 2px;
+            transition: 0.5s ease-in-out all;
+            cursor: pointer;
+            &:hover{background-color: transparent; color: red;}
+        }
+        
+    }
+}
+@media screen and (max-width: 850px) {
+    .modal-pollution {
+        margin-top: 15%;        
+        overflow: scroll;
+        height: auto;
+        padding-bottom: 50px;
+        p {font-size: 14px;}
+        ul {
+            margin-top: 10%;
+            li {
+                align-items: center;
+                justify-content: space-around;
+                margin: 5px 0;                
+                img {
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+

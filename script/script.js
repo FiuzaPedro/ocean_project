@@ -30,7 +30,7 @@ function initNavigation() {
 
 // Button interactions
 function initButtons() {
-    const ctaButton = document.querySelector('.cta-button');
+    const ctaButton = document.querySelector('.cta-button');   
     
     if (ctaButton) {
         ctaButton.addEventListener('click', function() {
@@ -39,11 +39,14 @@ function initButtons() {
             setTimeout(() => {
                 this.style.transform = 'translateY(-3px)';
             }, 100);
-            
-            // Show alert for demo
-            alert('🌊 Welcome to the Ocean! Dive in to explore more.');
+            document.querySelector('.modal-pollution').classList.add('active-modal');
         });
     }
+}
+
+//close modal pollution 
+function closeModal() {    
+    document.querySelector('.modal-pollution').classList.remove('active-modal');    
 }
 
 // Scroll effects
@@ -58,7 +61,8 @@ function initScrollEffects() {
         // Add shadow to header on scroll
         if (currentScroll > 50) {
             header.style.boxShadow = '0 4px 20px rgba(0, 188, 212, 0.3)';
-            topBtn.style.opacity =1;
+            topBtn.style.opacity = 1;            
+            
         } else {
             header.style.boxShadow = 'none';
             topBtn.style.opacity = 0;
@@ -198,6 +202,7 @@ function initSlides() {
 // document.addEventListener('DOMContentLoaded', function() {
     
 // });
+
 
 
 // Console welcome message

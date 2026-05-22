@@ -11,6 +11,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
 </head>
 <body>
+    <div class="modal-pollution">        
+        <h2>Exemplos <i onclick="closeModal()" id="close-btn" class="fa-solid fa-xmark"></i></h2>
+        <!-- <hr> -->
+        <ul>
+            <li>
+                <p>Material de pesca</p>
+                <img src="./img/fishnets2.png" alt="fishing boat">
+            </li>
+            <li>
+                <p>Plásticos</p>
+                <img src="./img/plastic1.jpg" alt="plastic pollution">
+            </li>
+            <li>
+                <p>Beatas</p>
+                <img src="./img/cigarbutts.png" alt="cigar pollution">
+            </li>
+            <li>
+                <p>Derrames de petróleo</p>
+                <img src="./img/shipwreck.png" alt="shipwreck oil spillage">
+            </li>
+            <li>
+                <p>Derrames de produtos químicos</p>
+                <img src="./img/chemicalwaste.png" alt="chemical waste underwater">
+            </li>
+        </ul>
+    </div>
     <div class="container">
         <header>
             <i style="font-size: 2em;" class="fa-solid fa-water"></i>
@@ -55,13 +81,15 @@
                     <div class="slide">
                         <h2>Produtos lançados no mar ou que chegam ao mar a partir de terra (I)</h2>
                         <br>
-                        <h3>Derrames de petróleo (“marés negras”)</h3>                        
-                        <ul class="slide1-ul">
-                            <li>Acidentais  (condutas quebradas, navios de transporte de petróleo naufragados, desastres na operação de exploração) </li>
-                            <li>Lavagem de tanques  dos navios de transporte</li>
-                        </ul>                        
-                        <img src="./img/prestigewreck.png" alt="prestige shipwreck and oil spillage">
-                        <img src="./img/peoplecleaningoil.jpg" alt="people cleaning oil on the shore">
+                        <div class="slide1-content">
+                            <h3>Derrames de petróleo (“marés negras”)</h3>
+                            <ul class="slide1-ul">
+                                <li>Acidentais  (condutas quebradas, navios de transporte de petróleo naufragados, desastres na operação de exploração) </li>
+                                <li>Lavagem de tanques  dos navios de transporte</li>
+                            </ul>
+                            <img src="./img/prestigewreck.png" alt="prestige shipwreck and oil spillage">
+                            <img src="./img/peoplecleaningoil.jpg" alt="people cleaning oil on the shore">
+                        </div>
                     </div>
                     <!--end first slide-->
                     <div class="slide">
@@ -218,13 +246,9 @@ Se esses organismos forem comidos por animais maiores (p. Exº, PEIXES,  BALEIAS
                             </ul>
                         </div>
                     </div>
-                    <!--end ninth slide-->
-                    <div class="slide">10</div>
-                    <div class="slide">11</div>
-                    <div class="slide">12</div>
-                    <div class="slide">13</div>
-                    <div class="slide">14</div>
+                    <!--end ninth slide-->                    
                 </div>
+                <!--end slides container-->
             </section>
 
 
@@ -255,11 +279,11 @@ Se esses organismos forem comidos por animais maiores (p. Exº, PEIXES,  BALEIAS
             </div>
             <p>&copy; 2026 Pedro Fiúza Web Developer</p>
         </footer>
-    <button class="back-to-top" onclick="window.scrollTo(0, 0);">&uparrow;</button>
-    </div> <!--end container-->
     
-    <script src="./script/script.js"></script>
+    </div> <!--end container-->
+    <button class="back-to-top" onclick="window.scrollTo(0, 0);">&uparrow;</button>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script/script.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/conflict-detection.min.js" integrity="sha512-9a/O7xs5VCV2iW8dxl1fxKmsE78LxTWxdWHbGF+k/lbPJAXAF1fCfPYb/GyoqpiaKfGjicH8SlLJkhyQMN+7SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 </html>
