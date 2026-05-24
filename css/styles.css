@@ -112,6 +112,7 @@ main {
     border-radius: 20px;    
     border: 1px solid rgba(0, 188, 212, 0.3);
     ul {
+        padding: 5%;
         margin: 2% 0;
         width: 100%;
         text-align: left;
@@ -119,10 +120,10 @@ main {
         background-color: var(--ocean-cyan);
         color: var(--ocean-white);
         border-radius: 5px;
-        li {padding: 10px; font-weight: bold; font-size: 1.1em;}
-        
+        li {padding: 10px; font-weight: bold; font-size: 20px;}        
     }
 }
+
 
 .hero h2 {
     font-size: 3rem;
@@ -354,8 +355,10 @@ footer {
 }
 @media screen and (max-width:850px) {
     .back-to-top {
-        bottom: 20px; left: 70%;padding: 10px; z-index: 9999999999999;
+        bottom: 20px; left: 50%;padding: 10px; z-index: 9999999999999;
+        background-color: rgba(0, 188, 212, 0.2);
         font-size: 1.5em;
+        margin-left: -25px;
         width: 50px;
         opacity: 1;
     }
@@ -400,11 +403,7 @@ height: 0; width: 0; top: 0; left: 0; border: 2px ridge lightslategray;}
     }
 }
 @media screen and (max-width: 850px) {
-    .modal-pollution {
-        margin-top: 15%;        
-        overflow: scroll;
-        height: auto;
-        padding-bottom: 50px;
+    .modal-pollution {                
         p {font-size: 14px;}
         ul {
             margin-top: 10%;
@@ -418,5 +417,20 @@ height: 0; width: 0; top: 0; left: 0; border: 2px ridge lightslategray;}
             }
         }
     }
+    /* .active-modal  {
+    opacity: 1;
+    z-index: 1000000;
+    position: fixed;    
+    background-color: rgba(10, 22, 40, 0.9); 
+    background: rgba(26, 58, 92, 0.6);
+    border-radius: 5px;
+    top: 2px;
+    left: 10%;
+    width: 80%;
+    height: 500px;
+    margin: 1% auto;    
+    backdrop-filter: blur(50px);
+    
+} */
 }
 
