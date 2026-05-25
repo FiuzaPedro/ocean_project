@@ -120,10 +120,15 @@ main {
         background-color: var(--ocean-cyan);
         color: var(--ocean-white);
         border-radius: 5px;
-        li {padding: 10px; font-weight: bold; font-size: 20px;}        
+        li {
+            padding: 10px; font-weight: bold; font-size: 20px; margin-left: -130%; transition: 1.2s ease-in-out all; background-color: var(--ocean-deep); width: 100%;            
+        }  
+        
     }
 }
-
+@media screen and (max-width: 850px) {
+    .hero ul.ocean-info-item { margin-left: 130%; width: auto;}
+}
 
 .hero h2 {
     font-size: 3rem;
@@ -155,7 +160,7 @@ main {
     padding: 5%;
     margin: 100px 0 50px;
 }
-.cta-button {
+.cta-button, .open-links {
     background: linear-gradient(135deg, var(--ocean-cyan) 0%, var(--ocean-teal) 100%);
     color: var(--ocean-white);
     border: none;
@@ -167,12 +172,12 @@ main {
     box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
 }
 
-.cta-button:hover {
+.cta-button:hover, .open-links:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 188, 212, 0.6);
 }
 
-.cta-button:active {
+.cta-button:active, .open-links:hover {
     transform: translateY(-1px);
 }
 
@@ -180,8 +185,9 @@ main {
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    gap: 30px;      
+    margin-top: 0 auto;
+    cursor: pointer;
 }
 
 .feature-card {    
@@ -191,6 +197,9 @@ main {
     border: 1px solid rgba(0, 188, 212, 0.2);
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
+    display: flex; flex-direction: column;
+    align-items: center;  justify-content: flex-end;
+    a { justify-self: end;}
 }
 
 .feature-card:hover {
@@ -209,7 +218,10 @@ main {
     color: var(--ocean-foam);
     line-height: 1.8;
 }
-
+.open-links {
+    margin-top: 5%;
+    padding: 7px 20px; text-decoration: none;font-size: 1em;
+}
 /* Footer */
 /* footer {
     background: rgba(10, 22, 40, 0.95);

@@ -56,17 +56,27 @@ function initScrollEffects() {
     
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
-        let topBtn = document.querySelector('.back-to-top');
+        let topBtn = document.querySelector('.back-to-top');        
         
         // Add shadow to header on scroll
         if (currentScroll > 50) {
             header.style.boxShadow = '0 4px 20px rgba(0, 188, 212, 0.3)';
-            topBtn.style.opacity = 1;            
-            
-        } else {
+            topBtn.style.opacity = 1;                        
+        } 
+        else {
             header.style.boxShadow = 'none';
             topBtn.style.opacity = 0;
         }
+        if(currentScroll > 300 && currentScroll < 410) {      
+            console.log("executed");
+            
+            let all_items = document.querySelectorAll('.hero ul li');
+            all_items.forEach(val=>  {
+                val.style.marginLeft = 0; val.style.backgroundColor = "transparent"
+            }                
+            ) 
+            return;            
+        } 
         
         lastScroll = currentScroll;
     });
