@@ -1,0 +1,80 @@
+/* Ocean Theme CSS */
+:root {
+    --ocean-dark: #0a1628;
+    --ocean-deep: #1a3a5c;
+    --ocean-blue: #2d6a9f;
+    --ocean-light: #4a90c2;
+    --ocean-cyan: #00bcd4;
+    --ocean-teal: #008080;
+    --ocean-foam: #e0f7fa;
+    --ocean-sand: #f5f5dc;
+    --ocean-coral: #ff7f50;
+    --ocean-white: #ffffff;
+    --ocean-gray: #b0bec5;
+}
+section {
+    margin: 10px 40px;
+    background-color: var(--ocean-deep);
+    padding: 10px; border-radius: 20px;
+}
+.ocean-floor-title { font-size: 1.8em;}
+.ocean-floor-section {
+    p {width: 90%; margin: 0 auto;}
+}
+.deepsea-creatures-wrapper { 
+    display: flex; justify-content: space-around; margin-top: 2.5%;
+    img {animation: anim-fishes 1.5s infinite alternate; border-radius: 50%;}
+}
+@media screen and (max-width: 850px) {
+    .deepsea-creatures-wrapper {img{ width: 50%;}}
+}
+@keyframes anim-fishes {
+    0% { box-shadow: 0 0 2px var(--ocean-cyan); }
+    100%{ box-shadow: 0 0 40px var(--ocean-blue); }
+}
+
+
+/* ocean-exploration styles */
+.ocean-exploration-section {
+    display: flex; justify-content: space-between;    
+    height: 100vh;
+}
+.ocean-exploration-content-left { 
+    background-image: url('../img/ocean-exploration-diagram.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 45%;
+    align-self: center; 
+    p{
+        background-color: rgba(10, 22, 40, 0.9); /*fallback*/
+        background: rgba(26, 58, 92, 0.5);
+        backdrop-filter: blur(1px);
+        margin-top: 25%;
+        padding: 20px;
+        color: var(--ocean-white);
+        font-weight: bold;
+    } 
+}
+.ocean-exploration-content-right {
+    width: 50%;
+    .img-wrapper {
+        display: flex;
+    }
+}
+@media screen and (max-width: 850px) {
+    .ocean-exploration-section {
+        flex-direction: column;
+        height: auto;
+    }
+    .ocean-exploration-content-left {
+        height: 300px;
+        background-size: cover;
+        width: 100%;        
+        align-self: flex-start;         
+    }
+    .ocean-exploration-content-right {
+        width: 100%;
+    }
+    .img-wrapper {flex-direction: column;}
+}

@@ -68,7 +68,6 @@ function initScrollEffects() {
             topBtn.style.opacity = 0;
         }
         if(currentScroll > 300 && currentScroll < 410) {      
-            console.log("executed");
             
             let all_items = document.querySelectorAll('.hero ul li');
             all_items.forEach(val=>  {
