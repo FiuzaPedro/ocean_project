@@ -1,0 +1,11 @@
+section {    
+    margin: 10px 40px;
+    background-color: var(--ocean-deep);
+    padding: 10px;
+    border-radius: 20px;
+}
+p, li { font-weight: bold;}
+.ocean-atmosphere-title {
+    font-size: 1.8em;
+}
+.ocean-atmosphere-subtitle { font-size: 1.3em; background-color: var(--ocean-cyan);}
