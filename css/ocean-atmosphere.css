@@ -10,7 +10,7 @@ p, li { font-weight: bold;}
     font-size: 1.8em;
 }
 .ocean-atmosphere-subtitle { font-size: 1.3em; background-color: var(--ocean-cyan);}
-.page1, .page2 {
+.page1, .page2, .page3, .page4, .page5, .page6 {
     overflow: hidden;
     text-align: center;
     padding: 0px 0 0 0;   
