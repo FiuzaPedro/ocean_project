@@ -1,2 +1,18 @@
 /* section page2 styles */
-.page2 {}
+.page2 {
+    h3 { padding: 20px; background-color: var(--ocean-light ); } 
+}
+.effects-wrapper {
+    position: relative;
+    p {
+        position: absolute; top: 30%; left: 25%; width: 50%;         
+        font-size: 1.5em;
+        background-color: rgba(0, 0, 0, .4); color: var(--ocean-sand);
+    }    
+}
+@media screen and (max-width: 850px) {
+    .effects-wrapper {
+        img {  width: 100%;}
+        p {width: 100%; left: 0; font-size: 1em;}
+    }
+}

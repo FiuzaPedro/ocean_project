@@ -13,7 +13,8 @@ p, li { font-weight: bold;}
 .page1, .page2 {
     overflow: hidden;
     text-align: center;
-    padding: 0px 0 0 0;    
+    padding: 0px 0 0 0;   
+    margin-bottom: 100px; 
 }
 .pollution-info-wrapper {
     text-align: center;
