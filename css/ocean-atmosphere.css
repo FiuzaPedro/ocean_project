@@ -3,9 +3,34 @@ section {
     background-color: var(--ocean-deep);
     padding: 10px;
     border-radius: 20px;
+    h2 { background-color: red; margin-bottom: 20px;}    
 }
 p, li { font-weight: bold;}
 .ocean-atmosphere-title {
     font-size: 1.8em;
 }
 .ocean-atmosphere-subtitle { font-size: 1.3em; background-color: var(--ocean-cyan);}
+.page1, .page2 {
+    overflow: hidden;
+    text-align: center;
+    padding: 0px 0 0 0;    
+}
+.pollution-info-wrapper {
+    text-align: center;
+    ul { 
+        background-color: var(--ocean-light);
+        padding: 10px;
+        list-style-position: inside; list-style-type: square; margin-bottom: 50px; li {color: var(--ocean-deep);} 
+    }
+}
+.inner-wrapper {
+    p { background-color: var(--ocean-light); padding: 25px; font-size: 1.2em; }
+}
+.graph-details {
+    display: flex; flex-direction: column;    
+    justify-self: center;
+    width: 200px;
+    div {
+        display: flex;justify-content: space-between;        
+    }
+}
