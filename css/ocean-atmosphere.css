@@ -25,7 +25,7 @@ p, li { font-weight: bold;}
     }
 }
 .inner-wrapper {
-    p { background-color: var(--ocean-light); padding: 25px; font-size: 1.2em; }
+    p { background-color: var(--ocean-light); padding: 25px; font-size: 1.2em; text-shadow: 0px 0px 10px red;       }
 }
 .graph-details {
     display: flex; flex-direction: column;    

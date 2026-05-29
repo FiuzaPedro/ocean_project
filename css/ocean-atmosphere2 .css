@@ -1,6 +1,6 @@
 /* section page2 styles */
 .page2, .page3 {
-    h3 { padding: 20px; background-color: var(--ocean-light ); } 
+    h3 { padding: 20px; background-color: var(--ocean-light ); text-shadow: 0px 0px 10px red;       } 
 }
 .effects-wrapper {
     position: relative;
@@ -8,7 +8,7 @@
         position: absolute; top: 30%; left: 25%; width: 50%;         
         font-size: 1.5em;
         background-color: rgba(0, 0, 0, .4); color: var(--ocean-sand);
-        border-radius: 5px;        
+        border-radius: 5px;         
     }    
 }
 @media screen and (max-width: 850px) {
@@ -29,4 +29,122 @@
     .page3 {
         img {width: 100%;}
     }
+}
+
+
+/* styles for the scroll and intersection observer function */
+.scroll-element {
+    height: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.scroll-element.show {
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Core styles/functionality */
+.tab {
+  position: relative;
+  margin: 2px 0;
+  border: 1px outset var(--ocean-sand);  
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  border-bottom: 1px outset var(--ocean-sand);
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+  background-color: var(--ocean-foam);
+}
+.tab input:checked ~ .tab__content {
+  max-height: 100vh;
+  max-width: 100vw;
+  padding: 10px;
+}
+
+/* Visual styles */
+.accordion {
+  color: var(--theme);
+  margin-bottom: 50px;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  overflow: hidden;  
+}
+.tab__label,
+.tab__close {
+  display: flex;
+  color: white;
+  background: var(--ocean-light);
+  cursor: pointer;
+}
+.tab__label {
+  justify-content: space-between;
+  padding: 1rem;
+}
+.tab__label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+  transform: rotate(270deg);
+}
+.tab__content p {
+  margin: 0;
+  padding: 1rem;
+}
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+.accordion--radio {
+  --theme: var(--secondary);
+}
+.accordion-image-wrapper {
+    display: flex; justify-content: space-around; 
+    img {align-self: flex-start; }
+}
+.pPteropodaShells {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 850px) {
+    .accordion-image-wrapper {
+        flex-direction: column;
+    }
+    .pteropoda-image-wrapper {
+      display: flex;flex-direction: column; justify-content: center; align-items: center;
+      img{ width: 50%;}
+    }
+    .pPteropodaShells {
+      margin-top: 20px; flex-direction: column; 
+      img { width: 100%;}
+    }
+}
+
+/* Arrow animation */
+.tab input:not(:checked) + .tab__label:hover::after {
+  animation: bounce .5s infinite;
+}
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-.25rem);
+  }
 }

@@ -53,7 +53,7 @@
             </section>
             <!--end section page 1-->
 
-            <section class="page2">
+            <section class="page2 scroll-element">
                 <h2>Aumento da concentração em dióxido de carbono (CO2) na atmosfera provoca a acidificação da água do mar</h2>
                 <div class="effects-wrapper">
                     <img src="./img/effects-schematic.jpg" alt="chemistry affecting marine life scheme">
@@ -63,11 +63,66 @@
             </section>
             <!--end section page 2-->
 
-            <section class="page3">
+            <section class="page3 scroll-element">
                 <h2>Desde a revolução industrial (1760 - …) a superfície do oceano já está ~30% mais ácida</h2>
                 <img src="./img/acidification-scheme.jpg" alt="Acidification scheme image">
                 <h3>No fim do séc. Xxi, os cenários apontam para um aumento na acidez de 100-150% !!!</h3>
             </section>
+            <!--end section page 3-->
+
+            <section class="page4 scroll-element">
+                <h2>Efeitos da acidificação do Oceano</h2>
+                <p>Organismos marinhos “calcificadores” usam as várias formas de carbonato de cálcio para construir as membranas das células, as conchas ou os esqueletos</p>
+                <p>A acidificação crescente pode tornar impossível este processo em muitos organismos marinhos.<br>Exemplos:</p>
+                <!-- accordion html-->
+                <div class="accordion">
+                    <div class="tab">
+                        <input type="checkbox" name="accordion-1" id="cb1">
+                        <label for="cb1" class="tab__label">Plancton marinho (Fitoplancton e Zooplancton)</label>
+                        <div class="tab__content">
+                            <div class="accordion-image-wrapper">
+                                <img src="./img/plancton1.jpg" alt="plancton image">
+                                <img src="./img/plancton2.jpg" alt="plancton image">
+                            </div>
+                        </div>
+                    </div>
+                    <!--end tab 1--> 
+                    <div class="tab">
+                        <input type="checkbox" name="accordion-1" id="cb2">
+                        <label for="cb2" class="tab__label">Moluscos, crustáceos, peixes</label>
+                        <div class="tab__content">
+                            <div class="accordion-image-wrapper">
+                                <img src="./img/shellfish1.png" alt="shellfish image">
+                                <img src="./img/shellfish2.jpg" alt="shellfish image">
+                                <img src="./img/shellfish3.jpg" alt="shellfish image">
+                            </div>
+                        </div>
+                    </div>
+                    <!--end tab 2-->
+                    <div class="tab">
+                        <input type="checkbox" name="accordion-1" id="cb3">
+                        <label for="cb3" class="tab__label">Corais (regiões tropicais e sub-tropicais)</label>
+                        <div class="tab__content">
+                            <div class="accordion-image-wrapper">
+                                <img src="./img/coral1.png" alt="coral image" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <!--end tab 3-->
+                </div>
+                <!--end accordion html-->
+                <h3>O Pterópoda (alguns mm a 1-2 cm) é alimento de organismos desde o krill até às baleias</h3>
+                <br>
+                <div class="pteropoda-image-wrapper">
+                    <img src="./img/pteropoda.png" alt="pteropoda image">
+                    <img src="./img/krill.jpg" alt="krill image">
+                    <img src="./img//whale3.jpg" alt="">
+                </div>
+                <p class="pPteropodaShells">Experiência em laboratório (EUA) Concha de Pterópoda a dissolver-se em cerca de 45 dias quando colocada em água do mar com a acidez prevista para 2100
+                    <img src="./img/pteropodashells.png" alt="pteropods shells getting dissolved through acidity">
+                </p>
+            </section>
+            <!--end section page4-->
             
         </main>
         
@@ -85,6 +140,7 @@
     <button class="back-to-top" onclick="window.scrollTo(0, 0);">&uparrow;</button>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script/script.js"></script>
+    <script src="./script/intersection-observer.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/conflict-detection.min.js" integrity="sha512-9a/O7xs5VCV2iW8dxl1fxKmsE78LxTWxdWHbGF+k/lbPJAXAF1fCfPYb/GyoqpiaKfGjicH8SlLJkhyQMN+7SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 </html>
