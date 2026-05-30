@@ -14,20 +14,28 @@
     <div class="container">
         <header>
             <i style="font-size: 2em;" class="fa-solid fa-water"></i>
-            <h1>Oceanos</h1>            
+            <h1 data-i18n="header.title">Oceanos</h1>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="pt" title="Português">
+                    <img src="https://flagcdn.com/w40/pt.png" alt="Portugal flag">
+                </button>
+                <button class="lang-btn" data-lang="en" title="English">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom flag">
+                </button>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>                    
+                    <li><a href="#">Home</a></li>
                 </ul>
             </nav>
         </header>
         
         <main>
             <section class="hero">
-                <h3 class="ocean-floor-title">Materiais provenientes do fundo oceânico</h3>                
+                <h3 class="ocean-floor-title" data-i18n="oceanFloor.title">Materiais provenientes do fundo oceânico</h3>
             </section>
             <section class="ocean-floor-section">
-                <p>Ainda há muito para conhecer sobre as espécies que vivem no fundo dos oceanos (muitas delas endémicas), em condições extremas de ausência de luz (luz solar penetra até 200 m no máximo) e pressões muito elevadas (100 atm a 1000 m)</p>
+                <p data-i18n="oceanFloor.desc">Ainda há muito para conhecer sobre as espécies que vivem no fundo dos oceanos (muitas delas endémicas), em condições extremas de ausência de luz (luz solar penetra até 200 m no máximo) e pressões muito elevadas (100 atm a 1000 m)</p>
                 <div class="deepsea-creatures-wrapper">
                     <img src="./img/deepseafish1.png" alt="deep sea fish image">
                     <img src="./img/deepseafish2.png" alt="deep sea fish image">
@@ -35,14 +43,14 @@
             </section>
             <section class="ocean-exploration-section">
                 <div class="ocean-exploration-content-left">
-                    <p>Alteração dos habitats dos fundos oceânicos: afecta a biodiversidade e os ecosistemas</p>
+                    <p data-i18n="oceanFloor.habitat">Alteração dos habitats dos fundos oceânicos: afecta a biodiversidade e os ecosistemas</p>
                 </div>
                 <div class="ocean-exploration-content-right">
                     <img src="./img/tuna.png" alt="tuna image">
                     <div class="img-wrapper">
                         <img src="./img/shark.png" alt="shark image">
                         <img src="./img/whale2.png" alt="whale image"></div>
-                        <p>Ruído e vibrações e fugas de combustível ou de produtos tóxicos causadas pelo equipamento e navios de exploração : afectam algumas espécies, tais como as baleias, os atuns, os tubarões</p>
+                        <p data-i18n="oceanFloor.noise">Ruído e vibrações e fugas de combustível ou de produtos tóxicos causadas pelo equipamento e navios de exploração : afectam algumas espécies, tais como as baleias, os atuns, os tubarões</p>
                 </div>
             </section>
             
@@ -55,13 +63,14 @@
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
-            <p>&copy; 2026 Pedro Fiúza Web Developer</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Pedro Fiúza Web Developer</p>
         </footer>
     
     </div> <!--end container-->
     <button class="back-to-top" onclick="window.scrollTo(0, 0);">&uparrow;</button>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script/script.js"></script>
+    <script src="./script/translations.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/conflict-detection.min.js" integrity="sha512-9a/O7xs5VCV2iW8dxl1fxKmsE78LxTWxdWHbGF+k/lbPJAXAF1fCfPYb/GyoqpiaKfGjicH8SlLJkhyQMN+7SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 </html>

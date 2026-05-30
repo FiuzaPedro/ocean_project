@@ -11,28 +11,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
 </head>
 <body class="animate__animated  animate__fadeIn">
-    <div class="modal-pollution">        
-        <h2>Exemplos <i onclick="closeModal()" id="close-btn" class="fa-solid fa-xmark"></i></h2>
+    <div class="modal-pollution">
+        <h2><span data-i18n="modal.title">Exemplos</span> <i onclick="closeModal()" id="close-btn" class="fa-solid fa-xmark"></i></h2>
         <!-- <hr> -->
         <ul>
             <li>
-                <p>Material de pesca</p>
+                <p data-i18n="modal.fishing">Material de pesca</p>
                 <img src="./img/fishnets2.png" alt="fishing boat">
             </li>
             <li>
-                <p>Plásticos</p>
+                <p data-i18n="modal.plastics">Plásticos</p>
                 <img src="./img/plastic1.jpg" alt="plastic pollution">
             </li>
             <li>
-                <p>Beatas</p>
+                <p data-i18n="modal.cigarbutts">Beatas</p>
                 <img src="./img/cigarbutts.png" alt="cigar pollution">
             </li>
             <li>
-                <p>Derrames de petróleo</p>
+                <p data-i18n="modal.oil">Derrames de petróleo</p>
                 <img src="./img/shipwreck.png" alt="shipwreck oil spillage">
             </li>
             <li>
-                <p>Derrames de produtos químicos</p>
+                <p data-i18n="modal.chemical">Derrames de produtos químicos</p>
                 <img src="./img/chemicalwaste.png" alt="chemical waste underwater">
             </li>
         </ul>
@@ -40,7 +40,15 @@
     <div class="container">
         <header>
             <i style="font-size: 2em;" class="fa-solid fa-water"></i>
-            <h1>Oceanos</h1>            
+            <h1 data-i18n="header.title">Oceanos</h1>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="pt" title="Português">
+                    <img src="https://flagcdn.com/w40/pt.png" alt="Portugal flag">
+                </button>
+                <button class="lang-btn" data-lang="en" title="English">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom flag">
+                </button>
+            </div>
             <!-- <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -52,20 +60,20 @@
         
         <main>
             <section class="hero">
-                <h2>Poluição nos Oceanos</h2>
-                <p class="terra">O oceano cobre cerca de 70% da superfície da terra!</p>
+                <h2 data-i18n="hero.title">Poluição nos Oceanos</h2>
+                <p class="terra" data-i18n="hero.terra">O oceano cobre cerca de 70% da superfície da terra!</p>
                 <ul>
-                    <li class="ocean-info-item"><i class="fa-solid fa-fish-fins"></i> Alberga 98% das espécies do planeta</li>
-                    <li class="ocean-info-item"><i class="fa-solid fa-cloud"></i> Regula o clima do planeta</li>
-                    <li class="ocean-info-item"><i class="fa-solid fa-shrimp"></i> Fornece alimentos</li>
-                    <li class="ocean-info-item"><i class="fa-solid fa-sailboat"></i> Viabiliza vários serviços essenciais (Transportes, lazer, etc)</li>
+                    <li class="ocean-info-item"><i class="fa-solid fa-fish-fins"></i> <span data-i18n="hero.info1">Alberga 98% das espécies do planeta</span></li>
+                    <li class="ocean-info-item"><i class="fa-solid fa-cloud"></i> <span data-i18n="hero.info2">Regula o clima do planeta</span></li>
+                    <li class="ocean-info-item"><i class="fa-solid fa-shrimp"></i> <span data-i18n="hero.info3">Fornece alimentos</span></li>
+                    <li class="ocean-info-item"><i class="fa-solid fa-sailboat"></i> <span data-i18n="hero.info4">Viabiliza vários serviços essenciais (Transportes, lazer, etc)</span></li>
                 </ul>
                 <div class="statement-card">
-                    <h1>Mas a humanidade tem visto o oceano principalmente como um bom e grande vazadouro  de lixo</h1>
-                    <p>(80% da poluição dos oceanos vem dos continentes, nomeadamente das zonas costeiras)
+                    <h1 data-i18n="hero.statement">Mas a humanidade tem visto o oceano principalmente como um bom e grande vazadouro  de lixo</h1>
+                    <p data-i18n="hero.statementSub">(80% da poluição dos oceanos vem dos continentes, nomeadamente das zonas costeiras)
 </p>
-                    <button class="cta-button">Exemplos</button>
-                </div>                
+                    <button class="cta-button" data-i18n="hero.examplesBtn">Exemplos</button>
+                </div>
             </section>
             
             <section class="polution-info">
@@ -79,13 +87,13 @@
                 </div>
                 <div class="slides-container" >                    
                     <div class="slide">
-                        <h2>Produtos lançados no mar ou que chegam ao mar a partir de terra (I)</h2>
+                        <h2 data-i18n="slides.slide1.title">Produtos lançados no mar ou que chegam ao mar a partir de terra (I)</h2>
                         <br>
                         <div class="slide1-content">
-                            <h3>Derrames de petróleo (“marés negras”)</h3>
+                            <h3 data-i18n="slides.slide1.subtitle">Derrames de petróleo (marés negras)</h3>
                             <ul class="slide1-ul">
-                                <li>Acidentais  (condutas quebradas, navios de transporte de petróleo naufragados, desastres na operação de exploração) </li>
-                                <li>Lavagem de tanques  dos navios de transporte</li>
+                                <li data-i18n="slides.slide1.item1">Acidentais  (condutas quebradas, navios de transporte de petróleo naufragados, desastres na operação de exploração) </li>
+                                <li data-i18n="slides.slide1.item2">Lavagem de tanques  dos navios de transporte</li>
                             </ul>
                             <img src="./img/prestigewreck.png" alt="prestige shipwreck and oil spillage">
                             <img src="./img/peoplecleaningoil.jpg" alt="people cleaning oil on the shore">
@@ -96,32 +104,32 @@
                         <div class="img-slide2-wrapper">
                             <div>
                                 <img class="slide2-img1" src="./img/graph1.png" alt="">
-                                <h3>Elevado risco permanente de ocorrência de acidentes de poluição marinha na ZEE Portuguesa</h3>
+                                <h3 data-i18n="slides.slide2.title">Elevado risco permanente de ocorrência de acidentes de poluição marinha na ZEE Portuguesa</h3>
                             </div>
                             <img class="slide2-img2" src="./img/graph2.png" alt="">
-                        </div>                        
+                        </div>
                     </div>
                     <!--end second slide-->
                     <div class="slide">
                         <div class="slide3-wrapper">
-                            <h3>Efeitos dos derrames de petróleo no ecosistema</h3>
-                            <h4>Efeitos físicos e Efeitos químicos (componentes tóxicas: benzeno, tolueno , xileno, etc.)</h4>
+                            <h3 data-i18n="slides.slide3.title">Efeitos dos derrames de petróleo no ecosistema</h3>
+                            <h4 data-i18n="slides.slide3.subtitle">Efeitos físicos e Efeitos químicos (componentes tóxicas: benzeno, tolueno , xileno, etc)</h4>
                             <ul class="slide3-ul">
-                                <li>Aves marinhas (as asas ficam envolvidas em 	petróleo impedindo que voem)
+                                <li><span data-i18n="slides.slide3.birds">Aves marinhas (as asas ficam envolvidas em 	petróleo impedindo que voem)</span>
                                     <div>
                                         <img src="./img/bird1.jpg" alt="bird stuck in polution">
                                         <img src="./img/bird2.jpg" alt="bird stuck in polution">
                                         <img src="./img/bird3.png" alt="bird stuck in polution">
                                     </div>
                                 </li>
-                                <li>Mamíferos marinhos (a pele fica impedida de funcionar como isolador)
+                                <li><span data-i18n="slides.slide3.mammals">Mamíferos marinhos (a pele fica impedida de funcionar como isolador)</span>
                                     <div>
                                         <img src="./img/whale.jpg" alt="whale stuck in polution">
                                         <img src="./img/dolphin.jpg" alt="dolphin stuck in polution">
                                         <img src="./img/seals.jpg" alt="">
                                     </div>
                                 </li>
-                                <li>Peixes , moluscos , crustáceos , répteis (asfixia)
+                                <li><span data-i18n="slides.slide3.fish">Peixes , moluscos , crustáceos , répteis (asfixia)</span>
                                     <div>
                                         <img src="./img/deadfishes.jpg" alt="">
                                         <img src="./img/crab.jpg" alt="">
@@ -129,20 +137,20 @@
                                     </div>
                                 </li>
                                 <li>
-                                    Plancton e algas (redução da taxa de fotosíntese)
+                                    <span data-i18n="slides.slide3.plankton">Plancton e algas (redução da taxa de fotosíntese)</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <!--end third slide-->
                     <div class="slide">
-                        <h2>Produtos lançados no mar ou que chegam ao mar a partir de terra(II)</h2>
-                        <h3>Lixo (plásticos) (nota: os plásticos podem levar centenas de anos a decompor-se!)</h3>
+                        <h2 data-i18n="slides.slide4.title">Produtos lançados no mar ou que chegam ao mar a partir de terra(II)</h2>
+                        <h3 data-i18n="slides.slide4.subtitle">Lixo (plásticos) (nota: os plásticos podem levar centenas de anos a decompor-se!)</h3>
                         <ul>
-                            <li>Sacos de compras</li>
-                            <li>Garrafas de bebidas e respectivas tampas</li>
-                            <li>Embalagens de comida (“fast food”)</li>
-                            <li>Palhinhas e talheres de plástico (“fast food”)</li>
+                            <li data-i18n="slides.slide4.item1">Sacos de compras</li>
+                            <li data-i18n="slides.slide4.item2">Garrafas de bebidas e respectivas tampas</li>
+                            <li data-i18n="slides.slide4.item3">Embalagens de comida</li>
+                            <li data-i18n="slides.slide4.item4">Palhinhas e talheres de plástico</li>
                         </ul>
                         <div class="slide4img-wrapper">
                             <img src="./img/plastic1.jpg" alt="plastic pollution image">
@@ -151,26 +159,26 @@
                             <img src="./img/plastic4.png" alt="plastic pollution image">                            
                         </div>
                         <img src="./img/marianatrenchdiagram.png" alt="marianas trench diagram image">
-                        <p>“…um saco de plástico detectado na fossa das Marianas (o local mais profundo dos oceanos, no Pacífico), a 11 mil metros de profundidade”</p>
+                        <p data-i18n="slides.slide4.mariana">um saco de plástico detectado na fossa das Marianas (o local mais profundo dos oceanos, no Pacífico), a 11 mil metros de profundidade</p>
                     </div>
                     <!--end fourth slide-->
                     <div class="slide">
-                        <h2>Efeitos dos plásticos no oceano</h2>
+                        <h2 data-i18n="slides.slide5.title">Efeitos dos plásticos no oceano</h2>
                         <div class="slide5-content">
-                            <h3>Efeitos físicos</h3>
-                            <p>Mamíferos marinhos  ou peixes (engolem ou ficam presos nos plásticos)</p>
+                            <h3 data-i18n="slides.slide5.physical">Efeitos físicos</h3>
+                            <p data-i18n="slides.slide5.physicalDesc">Mamíferos marinhos  ou peixes (engolem ou ficam presos nos plásticos)</p>
                             <div class="slide5-img-wrapper">
                                 <img src="./img/plastic-pollution1.jpg" alt="example of plastic pollution underwater">
                                 <img src="./img/plastic-pollution2.jpg" alt="example of plastic pollution underwater">
                             </div>                            
-                            <p>Encontrado cachalote morto com seis quilos de plástico no estômago. O animal tinha ingerido sacos de plástico, garrafas, chinelos de dedo e 115 copos    (National Geographic, 2018)</p>
+                            <p data-i18n="slides.slide5.spermWhale">Encontrado cachalote morto com seis quilos de plástico no estômago. O animal tinha ingerido sacos de plástico, garrafas, chinelos de dedo e 115 copos (&quot;National Geographic, 2018&quot;)</p>
                             <br>
-                            <h3>Efeitos químicos</h3>
-                            <p>Composição dos plásticos (cuja matéria-prima é o petróleo) inclui substâncias tóxicas, muitas delas carcinogénicas ou neurotóxicas (cloreto de vinil do pvc, dioxinas e benzeno do poliestireno, formaldeído dos policarbonatos, etc.)</p>
-                            <article>O plástico vai-se degradando com a exposição à radiação solar (fotodegradação) mas leva milhares de anos.
+                            <h3 data-i18n="slides.slide5.chemical">Efeitos químicos</h3>
+                            <p data-i18n="slides.slide5.chemicalDesc">Composição dos plásticos (cuja matéria-prima é o petróleo) inclui substâncias tóxicas, muitas delas carcinogénicas ou neurotóxicas (cloreto de vinil do pvc, dioxinas e benzeno do poliestireno, formaldeído dos policarbonatos, etc)</p>
+                            <article data-i18n="slides.slide5.degradation">O plástico vai-se degradando com a exposição à radiação solar (fotodegradação) mas leva milhares de anos.
 Os organismos pequenos (plancton) podem comer pequenas partículas de plástico (microplásticos, resultantes dessa decomposição ) e absorverem os produtos químicos nos seus tecidos.
-Se esses organismos forem comidos por animais maiores (p. Exº, PEIXES,  BALEIAS) OS PRODUTOS TÓXICOS VÃO FAZER PARTE DOS TECIDOS DESTES.
-<span>E, eventualmente, passar para os humanos</span></article> <br>
+Se esses organismos forem comidos por animais maiores (Exemplo: peixes,  baleias) os produtos tóxicos vão fazer parte dos tecidos destes 
+e, eventualmente, passar para os humanos</article> <br>
                             <div class="slide5-img-wrapper">                                                                
                                 <img class="img-arrow" src="./img/toxins.jpg" alt="toxic substances">
                                 <i class="first-arrow fa-solid fa-arrow-right-long fa-2x"></i>
@@ -182,26 +190,26 @@ Se esses organismos forem comidos por animais maiores (p. Exº, PEIXES,  BALEIAS
                     </div>
                     <!--end fifth slide-->
                     <div class="slide">
-                        <h2>“Sopa de lixo” Nos oceanos</h2>
+                        <h2 data-i18n="slides.slide6.title">Sopa de lixo Nos oceanos</h2>
                         <div class="slide6-content">
                             <div class="slide6-img-wrapper">
                                 <img src="./img/diagrama-lixo-oceanos.png" alt="trash in the ocean diagram">
                                 <img src="./img/ocean-surface-pollution.jpg" alt="ocean surface pollution">
                             </div>
-                            <p>A ”sopa de plástico” do Pacífico norte, detectada há 20 anos, tem 17 vezes o tamanho de Portugal (~1,6 milhões de metros quadrados) <br>
+                            <p data-i18n="slides.slide6.description">A sopa de plástico do Pacífico norte, detectada há 20 anos, tem 17 vezes o tamanho de Portugal (+- 1,6 milhões de metros quadrados).  
                             Circulação na superfície dos oceanos gera zonas de convergência onde os microplásticos se acumulam</p>
                             <img class="map-image" src="./img/plastic-convergence-zone-map.png" alt="plastic convergence zone map">
-                            <p>As maiores concentrações no Atlântico Norte foram observadas entre 22ºN e 38ºN, numa região centrada a 32ºN.</p>
+                            <p data-i18n="slides.slide6.atlantic">As maiores concentrações no Atlântico Norte foram observadas entre 22ºN e 38ºN, numa região centrada a 32ºN</p>
                         </div>
                     </div>
                     <!--end sixth slide-->
                     <div class="slide">
-                        <h2>Produtos lançados no mar ou que chegam ao mar a partir de terra</h2>                        
+                        <h2 data-i18n="slides.slide7.title">Produtos lançados no mar ou que chegam ao mar a partir de terra</h2>
                         <div class="slide7-content">
-                            <h3>Material de pesca  (redes,  cabos, etc.)</h3>
+                            <h3 data-i18n="slides.slide7.subtitle">Material de pesca  (redes,  cabos, etc)</h3>
                             <img src="./img/fishnets.jpg" alt="fishnets caught by boat">
-                            <h3>Efeitos do material de pesca (redes, cabos)</h3>
-                            <p>Peixes, crustáceos, moluscos, aves e outros animais marinhos (tartarugas, golfinhos, tubarões, etc.) Podem comer ou ficar presos nas redes ou nos cabos</p>
+                            <h3 data-i18n="slides.slide7.effects">Efeitos do material de pesca (redes, cabos)</h3>
+                            <p data-i18n="slides.slide7.effectsDesc">Peixes, crustáceos, moluscos, aves e outros animais marinhos (tartarugas, golfinhos, tubarões, etc) Podem comer ou ficar presos nas redes ou nos cabos</p>
                             <div class="slide7-img-wrapper">
                                 <img src="./img/sealcaught.jpg" alt="seal caughht in fishnets">
                                 <img src="./img/turtlecaught.jpg" alt="turtle caught in fishnet">
@@ -212,14 +220,14 @@ Se esses organismos forem comidos por animais maiores (p. Exº, PEIXES,  BALEIAS
                     </div>
                     <!--end seventh slide-->
                     <div class="slide">
-                        <h2>Produtos lançados no mar ou que chegam ao mar a partir de terra (IV)</h2>                        
+                        <h2 data-i18n="slides.slide8.title">Produtos lançados no mar ou que chegam ao mar a partir de terra (IV)</h2>
                         <div class="slide8-content">
-                            <h3>Outro lixo</h3>
+                            <h3 data-i18n="slides.slide8.subtitle">Outro lixo</h3>
                             <ul>
-                                <li>Vidro, metais, papel, tecidos, borracha, madeira</li>
-                                <li>Beatas de cigarro</li>
-                                <li>Cotonetes</li>
-                                <li>Máscaras (moda 2020-21)</li>
+                                <li data-i18n="slides.slide8.item1">Vidro, metais, papel, tecidos, borracha, madeira</li>
+                                <li data-i18n="slides.slide8.item2">Beatas de cigarro</li>
+                                <li data-i18n="slides.slide8.item3">Cotonetes</li>
+                                <li data-i18n="slides.slide8.item4">Máscaras (moda 2020-21)</li>
                             </ul>
                             <br>
                             <div class="slide8-img-wrapper">
@@ -231,18 +239,18 @@ Se esses organismos forem comidos por animais maiores (p. Exº, PEIXES,  BALEIAS
                     </div>
                     <!--end eighth slide-->
                     <div class="slide">
-                        <h2>Produtos lançados no mar ou que chegam ao mar a partir de terra(V)</h2>
+                        <h2 data-i18n="slides.slide9.title">Produtos lançados no mar ou que chegam ao mar a partir de terra(V)</h2>
                         <div class="slide9-content">
-                            <h3>Produtos provenientes de despejos, descargas dos rios, etc.</h3>
+                            <h3 data-i18n="slides.slide9.subtitle">Produtos provenientes de despejos, descargas dos rios, etc</h3>
                             <div class="slide9-img-wrapper">
                                 <img src="./img/spillage1.png" alt="spillage image">
                                 <img src="./img/spillage2.png" alt="another spillage image">
                                 <img src="./img/spillage3.jpg" alt="spillage with dead fishes">
                             </div>
                             <ul>
-                                <li>Produtos provenientes da actividade comercial, industrial ou doméstica (óleos alimentares, restos de comida, etc.)</li>
-                                <li>Medicamentos , através dos esgotos (antibióticos, antidepressivos, hormonas, medicação para o coração  ou contra o cancro, analgésicos, além de grandes quantidades de cafeina)</li>
-                                <li>Produtos de higiene pessoal  lançados na sanita (cotonetes, toalhitas húmidas, tampões, pensos, cabelos, etc.)</li>
+                                <li data-i18n="slides.slide9.item1">Produtos provenientes da actividade comercial, industrial ou doméstica (óleos alimentares, restos de comida, etc)</li>
+                                <li data-i18n="slides.slide9.item2">Medicamentos , através dos esgotos (antibióticos, antidepressivos, hormonas, medicação para o coração  ou contra o cancro, analgésicos, além de grandes quantidades de cafeina)</li>
+                                <li data-i18n="slides.slide9.item3">Produtos de higiene pessoal  lançados na sanita (cotonetes, toalhitas húmidas, tampões, pensos, cabelos, etc)</li>
                             </ul>
                         </div>
                     </div>
@@ -253,15 +261,15 @@ Se esses organismos forem comidos por animais maiores (p. Exº, PEIXES,  BALEIAS
 
             <section class="features">
                 <div class="feature-card">
-                    <h3>Materiais provenientes do fundo oceânico</h3>
-                    <p>Devidos à exploração mineira no oceano</p>
-                    <a href="ocean-floor-exploration.html" class="open-links">Abrir</a>
+                    <h3 data-i18n="features.floor.title">Materiais provenientes do fundo oceânico</h3>
+                    <p data-i18n="features.floor.desc">Devidos à exploração mineira no oceano</p>
+                    <a href="ocean-floor-exploration.html" class="open-links" data-i18n="features.floor.open">Abrir</a>
                 </div>
                 <div class="feature-card">
-                    <h3>Alterações no oceano devidas à interacção com a atmosfera</h3>
-                    <p>Oceano absorve  cerca de 30% do co2 da atmosfera</p>
-                    <a href="ocean-atmosphere-interaction.html" class="open-links">Abrir</a>
-                </div>                
+                    <h3 data-i18n="features.atmosphere.title">Alterações no oceano devidas à interacção com a atmosfera</h3>
+                    <p data-i18n="features.atmosphere.desc">Oceano absorve  cerca de 30% do co2 da atmosfera</p>
+                    <a href="ocean-atmosphere-interaction.html" class="open-links" data-i18n="features.atmosphere.open">Abrir</a>
+                </div>
             </section>
         </main>
         
@@ -272,13 +280,14 @@ Se esses organismos forem comidos por animais maiores (p. Exº, PEIXES,  BALEIAS
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
-            <p>&copy; 2026 Pedro Fiúza Web Developer</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Pedro Fiúza Web Developer</p>
         </footer>
     
     </div> <!--end container-->
     <button class="back-to-top" onclick="window.scrollTo(0, 0);">&uparrow;</button>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script/script.js"></script>
+    <script src="./script/translations.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/conflict-detection.min.js" integrity="sha512-9a/O7xs5VCV2iW8dxl1fxKmsE78LxTWxdWHbGF+k/lbPJAXAF1fCfPYb/GyoqpiaKfGjicH8SlLJkhyQMN+7SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 </html>

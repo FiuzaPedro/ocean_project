@@ -15,70 +15,79 @@
     <div class="container">
         <header>
             <i style="font-size: 2em;" class="fa-solid fa-water"></i>
-            <h1>Oceanos</h1>            
+            <h1 data-i18n="header.title">Oceanos</h1>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="pt" title="Português">
+                    <img src="https://flagcdn.com/w40/pt.png" alt="Portugal flag">
+                </button>
+                <button class="lang-btn" data-lang="en" title="English">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom flag">
+                </button>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>                    
+                    <li><a href="#">Home</a></li>
                 </ul>
             </nav>
         </header>
         
         <main>
             <section class="hero">
-                <h3 class="ocean-atmosphere-title">Alterações no oceano devidas à interacção com a atmosfera</h3>
-                <h4 class="ocean-atmosphere-subtitle">Oceano absorve  cerca de 30% do CO2 da atmosfera</h4>
+                <h3 class="ocean-atmosphere-title" data-i18n="oceanAtmosphere.title">Alterações no oceano devidas à interacção com a atmosfera</h3>
+                <h4 class="ocean-atmosphere-subtitle" data-i18n="oceanAtmosphere.subtitle">Oceano absorve  cerca de 30% do CO2 da atmosfera</h4>
             </section>   
             
             <section class="page1">
-                <h2>Aumento das emissões de dióxido de carbono (CO2) na atmosfera</h2>
+                <h2 data-i18n="oceanAtmosphere.page1.title">Aumento das emissões de dióxido de carbono (CO2) na atmosfera</h2>
                 <div class="pollution-img-wrapper">
                     <img src="./img/factories.png" alt="factories smoke image">
                     <img src="./img/traffic-pollution.jpg" alt="traffic pollution image">
                 </div>
                 <div class="pollution-info-wrapper">
                     <ul>
-                        <h3>Concentração de CO2 na atmosfera (Unidades: partes por milhão em volume)</h3>
-                        <li>Pré-industrial (antes de 1760): 280</li>
-                        <li>Em 2000: 368</li>
-                        <li>Previsão para fim séc. XXI:	800</li>
+                        <h3 data-i18n="oceanAtmosphere.page1.co2Title">Concentração de CO2 na atmosfera (Unidades: partes por milhão em volume)</h3>
+                        <li data-i18n="oceanAtmosphere.page1.preIndustrial">Pré-industrial (antes de 1760): 280</li>
+                        <li data-i18n="oceanAtmosphere.page1.year2000">Em 2000: 368</li>
+                        <li data-i18n="oceanAtmosphere.page1.prediction">Previsão para fim séc. XXI:	800</li>
                     </ul>
                     <div class="inner-wrapper">
                         <div class="graph-details">
                             <img src="./img/graph-pollution.png" alt="pollution concentration graph">
                             <div><span>2000</span> <span>2050</span> <span>2100</span></div>
                         </div>
-                        <p>Concentrações para diferentes cenários de emissões de CO2 (IPCC – intergovernamental panel for climate change)</p>
+                        <p data-i18n="oceanAtmosphere.page1.scenarios">Concentrações para diferentes cenários de emissões de CO2 (IPCC – intergovernamental panel for climate change)</p>
                     </div>
                 </div>
             </section>
             <!--end section page 1-->
 
             <section class="page2 scroll-element">
-                <h2>Aumento da concentração em dióxido de carbono (CO2) na atmosfera provoca a acidificação da água do mar</h2>
+                <h2 data-i18n="oceanAtmosphere.page2.title">Aumento da concentração em dióxido de carbono (CO2) na atmosfera provoca a acidificação da água do mar</h2>
                 <div class="effects-wrapper">
                     <img src="./img/effects-schematic.jpg" alt="chemistry affecting marine life scheme">
-                    <p>Dióxido  +  Água +  Ião <i class="fa-solid fa-right-long"></i> 2 Iões Bicarbonato de Carbono  Carbonato</p>
+                    <p data-i18n="oceanAtmosphere.page2.equation">Dióxido  +  Água +  Ião <i class="fa-solid fa-right-long"></i> 2 Iões Bicarbonato de Carbono  Carbonato</p>
                 </div>
-                <h3>Consumo de iões carbonato dificulta a calcificação</h3>
+                <h3 data-i18n="oceanAtmosphere.page2.calcification">Consumo de iões carbonato dificulta a calcificação</h3>
             </section>
             <!--end section page 2-->
 
             <section class="page3 scroll-element">
-                <h2>Desde a revolução industrial (1760 - …) a superfície do oceano já está ~30% mais ácida</h2>
+                <h2 data-i18n="oceanAtmosphere.page3.title">Desde a revolução industrial (1760 - …) a superfície do oceano já está ~30% mais ácida</h2>
                 <img src="./img/acidification-scheme.jpg" alt="Acidification scheme image">
-                <h3>No fim do séc. Xxi, os cenários apontam para um aumento na acidez de 100-150% !!!</h3>
+                <h3 data-i18n="oceanAtmosphere.page3.prediction">No fim do séc. Xxi, os cenários apontam para um aumento na acidez de 100-150% !!!</h3>
             </section>
             <!--end section page 3-->
 
             <section class="page4 scroll-element">
-                <h2>Efeitos da acidificação do Oceano</h2>
-                <p>Organismos marinhos “calcificadores” usam as várias formas de carbonato de cálcio para construir as membranas das células, as conchas ou os esqueletos</p>
-                <p>A acidificação crescente pode tornar impossível este processo em muitos organismos marinhos.<br>Exemplos:</p>
+                <h2 data-i18n="oceanAtmosphere.page4.title">Efeitos da acidificação do Oceano</h2>
+                <p data-i18n="oceanAtmosphere.page4.desc1">Organismos marinhos calcificadores usam as várias formas de carbonato de cálcio para construir as membranas das células, as conchas ou os esqueletos</p>
+                <p data-i18n="oceanAtmosphere.page4.desc2">A acidificação crescente pode tornar impossível este processo em muitos organismos marinhos.</p>
+                <p data-i18n="oceanAtmosphere.page4.desc3" style="margin:10px 0 ; color: var(--ocean-coral); font-size: 1.5em;">Exemplos</p>
                 <!-- accordion html-->
                 <div class="accordion">
                     <div class="tab">
                         <input type="checkbox" name="accordion-1" id="cb1">
-                        <label for="cb1" class="tab__label">Plancton marinho (Fitoplancton e Zooplancton)</label>
+                        <label for="cb1" class="tab__label" data-i18n="oceanAtmosphere.page4.tab1">Plancton marinho (Fitoplancton e Zooplancton)</label>
                         <div class="tab__content">
                             <div class="accordion-image-wrapper">
                                 <img src="./img/plancton1.jpg" alt="plancton image">
@@ -89,7 +98,7 @@
                     <!--end tab 1--> 
                     <div class="tab">
                         <input type="checkbox" name="accordion-1" id="cb2">
-                        <label for="cb2" class="tab__label">Moluscos, crustáceos, peixes</label>
+                        <label for="cb2" class="tab__label" data-i18n="oceanAtmosphere.page4.tab2">Moluscos, crustáceos, peixes</label>
                         <div class="tab__content">
                             <div class="accordion-image-wrapper">
                                 <img src="./img/shellfish1.png" alt="shellfish image">
@@ -101,7 +110,7 @@
                     <!--end tab 2-->
                     <div class="tab">
                         <input type="checkbox" name="accordion-1" id="cb3">
-                        <label for="cb3" class="tab__label">Corais (regiões tropicais e sub-tropicais)</label>
+                        <label for="cb3" class="tab__label" data-i18n="oceanAtmosphere.page4.tab3">Corais (regiões tropicais e sub-tropicais)</label>
                         <div class="tab__content">
                             <div class="accordion-image-wrapper">
                                 <img src="./img/coral2b.png" alt="coral image" width="100%">
@@ -111,16 +120,15 @@
                     <!--end tab 3-->
                 </div>
                 <!--end accordion html-->
-                <h3>O Pterópoda (alguns mm a 1-2 cm) é alimento de organismos desde o krill até às baleias</h3>
+                <h3 data-i18n="oceanAtmosphere.page4.pteropoda">O Pterópoda (alguns mm a 1-2 cm) é alimento de organismos desde o krill até às baleias</h3>
                 <br>
                 <div class="pteropoda-image-wrapper">
                     <img src="./img/pteropoda.png" alt="pteropoda image">
                     <img src="./img/krill.jpg" alt="krill image">
                     <img src="./img//whale3.jpg" alt="">
                 </div>
-                <p class="pPteropodaShells">Experiência em laboratório (EUA) Concha de Pterópoda a dissolver-se em cerca de 45 dias quando colocada em água do mar com a acidez prevista para 2100
-                    <img src="./img/pteropodashells.png" alt="pteropods shells getting dissolved through acidity">
-                </p>
+                <p class="pPteropodaShells" data-i18n="oceanAtmosphere.page4.experiment">Experiência em laboratório (EUA) Concha de Pterópoda a dissolver-se em cerca de 45 dias quando colocada em água do mar com a acidez prevista para 2100</p>
+                <img class="shellsImg" src="./img/pteropodashells.png" alt="pteropods shells getting dissolved through acidity" class="pteropoda-img">
             </section>
             <!--end section page4-->
             
@@ -133,7 +141,7 @@
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
-            <p>&copy; 2026 Pedro Fiúza Web Developer</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Pedro Fiúza Web Developer</p>
         </footer>
     
     </div> <!--end container-->
@@ -141,6 +149,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script/script.js"></script>
     <script src="./script/intersection-observer.js"></script>
+    <script src="./script/translations.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/conflict-detection.min.js" integrity="sha512-9a/O7xs5VCV2iW8dxl1fxKmsE78LxTWxdWHbGF+k/lbPJAXAF1fCfPYb/GyoqpiaKfGjicH8SlLJkhyQMN+7SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 </html>
