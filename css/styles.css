@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 /* Ocean Theme CSS */
 :root {
     --ocean-dark: #0a1628;
@@ -41,23 +42,28 @@ body {
 
 /* Header Styles */
 header {
+    font-family: cursive;
     display: flex;    
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background: rgba(10, 22, 40, 0.9);
     background: var(--ocean-blue);
     opacity: 0.9;
-    padding: 20px 10px;
-    text-align: center;
+    padding: 20px 10px;    
     position: sticky;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
     border-bottom: 2px solid var(--ocean-cyan);
     transition: .5s ease-in-out opacity;
+    font-family: "Monoton", sans-serif;    
+}
+header a {     
+    color: white ; display: flex; align-items: center; font-weight: bold; text-decoration: none;
+    &:hover {color: var(--ocean-cyan); transition: .3s ease-in-out color;}
 }
 
-header h1 {
+header h1 {    
     color: var(--ocean-white);
     font-size: 2.5rem;
     text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
@@ -280,6 +286,10 @@ footer p {
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
+        font-size: 14px;
+    }
+    header a {
+        font-size: 12px;
     }
 
     .language-switcher {
