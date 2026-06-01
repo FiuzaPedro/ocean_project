@@ -67,15 +67,18 @@ function initScrollEffects() {
             header.style.boxShadow = 'none';
             topBtn.style.opacity = 0;
         }
-        if(currentScroll > 300 && currentScroll < 410) {      
-            
+        if(currentScroll > 300 && currentScroll < 410) {
             let all_items = document.querySelectorAll('.hero ul li');
             all_items.forEach(val=>  {
                 val.style.marginLeft = 0; val.style.backgroundColor = "transparent"
             }                
-            ) 
+            )  //end foreach
             return;            
         } 
+        currentScroll > 2300 ? 
+        document.getElementsByTagName('footer')[0].style.opacity = 1 
+        :
+        document.getElementsByTagName('footer')[0].style.opacity = 0;
         
         lastScroll = currentScroll;
     });

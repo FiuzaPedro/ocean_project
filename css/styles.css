@@ -232,7 +232,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;      
-    margin-top: 0 auto;
+    margin: 10% auto;
     cursor: pointer;
 }
 
@@ -354,16 +354,20 @@ footer p {
 
 
 /* implementing wave animation and design */
-footer {
+footer {    
     & p {
         font-size: 20px;
         text-align: center;
     }
     margin-top: 100px;
     position: relative;
+    position: fixed;
+    opacity: 0;
+    bottom: 0;
     width: 100%;
     height: 140px;
     background: var(--ocean-deep);
+    transition: .5s linear opacity;
     & .wave {
         position: absolute;
         top: 40px;
