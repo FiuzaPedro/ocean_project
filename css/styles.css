@@ -41,8 +41,7 @@ body {
 }
 
 /* Header Styles */
-header {
-    font-family: cursive;
+header {    
     display: flex;    
     justify-content: space-around;
     align-items: center;
@@ -177,7 +176,8 @@ main {
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-family: "Monoton", sans-serif;
     margin-bottom: 20px;
     color: var(--ocean-sand);
     /* background-color: var(--ocean-cyan); */

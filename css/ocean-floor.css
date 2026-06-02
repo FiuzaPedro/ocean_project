@@ -17,7 +17,7 @@ section {
     background-color: var(--ocean-deep);
     padding: 10px; border-radius: 20px;
 }
-.ocean-floor-title { font-size: 1.8em;}
+.ocean-floor-title { font-size: 1.4em;font-family: "Monoton", sans-serif; letter-spacing: 1px;}
 .ocean-floor-section {
     margin-bottom: 100px;
     p {width: 90%; margin: 0 auto;}

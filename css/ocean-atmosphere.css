@@ -7,7 +7,7 @@ section {
 }
 p, li { font-weight: bold;}
 .ocean-atmosphere-title {
-    font-size: 1.8em;
+    font-size: 1.4em;font-family: "Monoton", sans-serif; letter-spacing: 1px;
 }
 .ocean-atmosphere-subtitle { font-size: 1.3em; background-color: var(--ocean-cyan);}
 .page1, .page2, .page3, .page4, .page5, .page6 {
