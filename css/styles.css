@@ -229,6 +229,7 @@ main {
 
 /* Features Section */
 .features {
+    overflow: hidden; 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;      
@@ -236,12 +237,12 @@ main {
     cursor: pointer;
 }
 
-.feature-card {    
+.feature-card {       
     background: rgba(26, 58, 92, 0.6);
     padding: 30px;
     border-radius: 15px;
     border: 1px solid rgba(0, 188, 212, 0.2);
-    transition: all 0.3s ease;
+    transition: all 0.9s ease;
     backdrop-filter: blur(5px);
     display: flex; flex-direction: column;
     align-items: center;  justify-content: flex-end;
@@ -264,6 +265,7 @@ main {
     color: var(--ocean-foam);
     line-height: 1.8;
 }
+.left-card {margin-left: -200%;} .right-card {margin-right: -250%;}
 .open-links {
     margin-top: 5%;
     padding: 7px 20px; text-decoration: none;font-size: 1em;

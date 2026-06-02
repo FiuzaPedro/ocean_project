@@ -75,6 +75,12 @@ function initScrollEffects() {
             )  //end foreach
             return;            
         } 
+        let features_pos = document.getElementById('features');
+        if(currentScroll > features_pos.offsetTop - features_pos.offsetHeight) {
+            document.querySelector(".left-card").style.marginLeft = 0;
+            document.querySelector('.right-card').style.marginRight = 0;
+        };
+        
         currentScroll > 2300 ? 
         document.getElementsByTagName('footer')[0].style.opacity = 1 
         :
