@@ -76,17 +76,17 @@ function initScrollEffects() {
             return;            
         } 
         let features_pos = document.getElementById('features');
-        if(currentScroll > features_pos.offsetTop - features_pos.offsetHeight) {
+        if(features_pos && currentScroll > features_pos.offsetTop - features_pos.offsetHeight) {
             document.querySelector(".left-card").style.marginLeft = 0;
             document.querySelector('.right-card').style.marginRight = 0;
-        };
+        };               
         
-        currentScroll > 2300 ? 
-        document.getElementsByTagName('footer')[0].style.opacity = 1 
+        currentScroll > 2200 ? 
+        document.getElementsByTagName('footer')[0].style.opacity = 1         
         :
         document.getElementsByTagName('footer')[0].style.opacity = 0;
         
-        lastScroll = currentScroll;
+        // lastScroll = currentScroll;
     });
 }
 
