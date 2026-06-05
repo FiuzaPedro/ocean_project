@@ -28,7 +28,7 @@ const translations = {
         },
         slides: {
             slide1: {
-                title: "Produtos lançados no mar ou que chegam ao mar a partir de terra (I)",
+                title: "(I) Produtos lançados no mar ou que chegam ao mar a partir de terra",
                 subtitle: "Derrames de petróleo (\"marés negras\")",
                 item1: "Acidentais (condutas quebradas, navios de transporte de petróleo naufragados, desastres na operação de exploração)",
                 item2: "Lavagem de tanques dos navios de transporte"
@@ -45,7 +45,7 @@ const translations = {
                 plankton: "Plancton e algas (redução da taxa de fotosíntese)"
             },
             slide4: {
-                title: "Produtos lançados no mar ou que chegam ao mar a partir de terra(II)",
+                title: "(II) Produtos lançados no mar ou que chegam ao mar a partir de terra",
                 subtitle: "Lixo (plásticos) (nota: os plásticos podem levar centenas de anos a decompor-se!)",
                 item1: "Sacos de compras",
                 item2: "Garrafas de bebidas e respectivas tampas",
@@ -63,18 +63,18 @@ const translations = {
                 degradation: "O plástico vai-se degradando com a exposição à radiação solar (fotodegradação) mas leva milhares de anos. Os organismos pequenos (plancton) podem comer pequenas partículas de plástico (microplásticos, resultantes dessa decomposição) e absorverem os produtos químicos nos seus tecidos. Se esses organismos forem comidos por animais maiores (Exemplo: peixes,  baleias) os produtos tóxicos vão fazer parte dos tecidos destes. E, eventualmente, passar para os humanos"
             },
             slide6: {
-                title: "\"Sopa de lixo\" Nos oceanos",
+                title: "\"Sopa de lixo\" nos oceanos",
                 description: "A \"sopa de plástico\" do Pacífico norte, detectada há 20 anos, tem 17 vezes o tamanho de Portugal (~1,6 milhões de metros quadrados). Circulação na superfície dos oceanos gera zonas de convergência onde os microplásticos se acumulam",
                 atlantic: "As maiores concentrações no Atlântico Norte foram observadas entre 22ºN e 38ºN, numa região centrada a 32ºN."
             },
             slide7: {
-                title: "Produtos lançados no mar ou que chegam ao mar a partir de terra",
+                title: "(III) Produtos lançados no mar ou que chegam ao mar a partir de terra",
                 subtitle: "Material de pesca (redes, cabos, etc.)",
                 effects: "Efeitos do material de pesca (redes, cabos)",
-                effectsDesc: "Peixes, crustáceos, moluscos, aves e outros animais marinhos (tartarugas, golfinhos, tubarões, etc.) Podem comer ou ficar presos nas redes ou nos cabos"
+                effectsDesc: "Peixes, crustáceos, moluscos, aves e outros animais marinhos (tartarugas, golfinhos, tubarões, etc.) podem comer ou ficar presos nas redes ou nos cabos"
             },
             slide8: {
-                title: "Produtos lançados no mar ou que chegam ao mar a partir de terra (IV)",
+                title: "(IV) Produtos lançados no mar ou que chegam ao mar a partir de terra",
                 subtitle: "Outro lixo",
                 item1: "Vidro, metais, papel, tecidos, borracha, madeira",
                 item2: "Beatas de cigarro",
@@ -82,7 +82,7 @@ const translations = {
                 item4: "Máscaras (moda 2020-21)"
             },
             slide9: {
-                title: "Produtos lançados no mar ou que chegam ao mar a partir de terra(V)",
+                title: "(V) Produtos lançados no mar ou que chegam ao mar a partir de terra",
                 subtitle: "Produtos provenientes de despejos, descargas dos rios, etc.",
                 item1: "Produtos provenientes da actividade comercial, industrial ou doméstica (óleos alimentares, restos de comida, etc.)",
                 item2: "Medicamentos, através dos esgotos (antibióticos, antidepressivos, hormonas, medicação para o coração ou contra o cancro, analgésicos, além de grandes quantidades de cafeina)",
@@ -103,7 +103,7 @@ const translations = {
         },
         oceanFloor: {
             title: "Materiais provenientes do fundo oceânico",
-            desc: "Ainda há muito para conhecer sobre as espécies que vivem no fundo dos oceanos (muitas delas endémicas), em condições extremas de ausência de luz (luz solar penetra até 200 m no máximo) e pressões muito elevadas (100 atm a 1000 m)",
+            desc: "Ainda há muito para conhecer sobre as espécies que vivem no fundo dos oceanos (muitas delas endémicas), em condições extremas de ausência de luz (luz solar penetra até 200 m no máximo) e pressões muito elevadas (100 atm a 1000 m de profundidade)",
             habitat: "Alteração dos habitats dos fundos oceânicos: afecta a biodiversidade e os ecosistemas",
             noise: "Ruído e vibrações e fugas de combustível ou de produtos tóxicos causadas pelo equipamento e navios de exploração: afectam algumas espécies, tais como as baleias, os atuns, os tubarões"
         },
@@ -116,16 +116,16 @@ const translations = {
                 preIndustrial: "Pré-industrial (antes de 1760): 280",
                 year2000: "Em 2000: 368",
                 prediction: "Previsão para fim séc. XXI: 800",
-                scenarios: "Concentrações para diferentes cenários de emissões de CO2 (IPCC – intergovernamental panel for climate change)"
+                scenarios: "Concentrações para diferentes cenários de emissões de CO2 (IPCC – Intergovernamental Panel for Climate Change)"
             },
             page2: {
                 title: "Aumento da concentração em dióxido de carbono (CO2) na atmosfera provoca a acidificação da água do mar",
-                equation: "Dióxido + Água + Ião → 2 Iões Bicarbonato de Carbono Carbonato",
+                equation: "Dióxido de Carbono + Água + Ião Carbonato → 2 Iões Bicarbonato",
                 calcification: "Consumo de iões carbonato dificulta a calcificação"
             },
             page3: {
                 title: "Desde a revolução industrial (1760 - …) a superfície do oceano já está ~30% mais ácida",
-                prediction: "No fim do séc. Xxi, os cenários apontam para um aumento na acidez de 100-150% !!!"
+                prediction: "No fim do séc. XXI, os cenários apontam para um aumento na acidez de 100-150% !!!"
             },
             page4: {
                 title: "Efeitos da acidificação do Oceano",
@@ -136,7 +136,7 @@ const translations = {
                 tab2: "Moluscos, crustáceos, peixes",
                 tab3: "Corais (regiões tropicais e sub-tropicais)",
                 pteropoda: "O Pterópoda (alguns mm a 1-2 cm) é alimento de organismos desde o krill até às baleias",
-                experiment: "Experiência em laboratório (EUA) Concha de Pterópoda a dissolver-se em cerca de 45 dias quando colocada em água do mar com a acidez prevista para 2100"
+                experiment: "Experiência em laboratório (EUA): Concha de Pterópoda a dissolver-se em cerca de 45 dias quando colocada em água do mar com a acidez prevista para 2100"
             }
         },
         footer: {
@@ -171,7 +171,7 @@ const translations = {
         },
         slides: {
             slide1: {
-                title: "Products released into the sea or that reach the sea from land (I)",
+                title: "(I) Products released into the sea or that reach the sea from land",
                 subtitle: "Oil spills (\"black tides\")",
                 item1: "Accidental (broken pipelines, wrecked oil transport ships, disasters in exploration operations)",
                 item2: "Washing of transport ship tanks"
@@ -188,7 +188,7 @@ const translations = {
                 plankton: "Plankton and algae (reduction in photosynthesis rate)"
             },
             slide4: {
-                title: "Products released into the sea or that reach the sea from land (II)",
+                title: "(II) Products released into the sea or that reach the sea from land",
                 subtitle: "Trash (plastics) (note: plastics can take hundreds of years to decompose!)",
                 item1: "Shopping bags",
                 item2: "Beverage bottles and their caps",
@@ -211,13 +211,13 @@ const translations = {
                 atlantic: "The highest concentrations in the North Atlantic were observed between 22ºN and 38ºN, in a region centered at 32ºN."
             },
             slide7: {
-                title: "Products released into the sea or that reach the sea from land",
+                title: "(III) Products released into the sea or that reach the sea from land",
                 subtitle: "Fishing gear (nets, cables, etc.)",
                 effects: "Effects of fishing gear (nets, cables)",
                 effectsDesc: "Fish, crustaceans, mollusks, birds and other marine animals (turtles, dolphins, sharks, etc.) Can eat or get trapped in nets or cables"
             },
             slide8: {
-                title: "Products released into the sea or that reach the sea from land (IV)",
+                title: "(IV) Products released into the sea or that reach the sea from land",
                 subtitle: "Other trash",
                 item1: "Glass, metals, paper, fabrics, rubber, wood",
                 item2: "Cigarette butts",
@@ -225,7 +225,7 @@ const translations = {
                 item4: "Masks (2020-21 fashion)"
             },
             slide9: {
-                title: "Products released into the sea or that reach the sea from land (V)",
+                title: "(V) Products released into the sea or that reach the sea from land",
                 subtitle: "Products from dumps, river discharges, etc.",
                 item1: "Products from commercial, industrial or domestic activity (cooking oils, food scraps, etc.)",
                 item2: "Medications, through sewage (antibiotics, antidepressants, hormones, heart medication or cancer medication, painkillers, in addition to large amounts of caffeine)",
@@ -246,7 +246,7 @@ const translations = {
         },
         oceanFloor: {
             title: "Materials from the ocean floor",
-            desc: "There is still much to learn about the species that live at the bottom of the oceans (many of them endemic), in extreme conditions of absence of light (sunlight penetrates up to 200 m maximum) and very high pressures (100 atm at 1000 m)",
+            desc: "There is still much to learn about the species that live at the bottom of the oceans (many of them endemic), in extreme conditions of absence of light (sunlight penetrates up to 200 m maximum) and very high pressures (100 atm at 1000 m of depth)",
             habitat: "Alteration of ocean floor habitats: affects biodiversity and ecosystems",
             noise: "Noise and vibrations and fuel leaks or toxic products caused by exploration equipment and ships: affect some species, such as whales, tuna, sharks"
         },
@@ -263,7 +263,7 @@ const translations = {
             },
             page2: {
                 title: "Increase in carbon dioxide (CO2) concentration in the atmosphere causes acidification of seawater",
-                equation: "Dioxide + Water + Ion → 2 Carbonate Bicarbonate Ions Carbon",
+                equation: "Carbon Dioxide + Water + Carbonate Ion → 2 Bicarbonate Ions",
                 calcification: "Consumption of carbonate ions hinders calcification"
             },
             page3: {
@@ -279,7 +279,7 @@ const translations = {
                 tab2: "Mollusks, crustaceans, fish",
                 tab3: "Corals (tropical and sub-tropical regions)",
                 pteropoda: "The Pteropod (a few mm to 1-2 cm) is food for organisms from krill to whales",
-                experiment: "Laboratory experiment (USA) Pteropod shell dissolving in about 45 days when placed in seawater with the acidity predicted for 2100"
+                experiment: "Laboratory experiment (USA): Pteropod shell dissolving in about 45 days when placed in seawater with the acidity predicted for 2100"
             }
         },
         footer: {

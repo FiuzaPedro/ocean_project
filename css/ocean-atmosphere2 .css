@@ -5,7 +5,7 @@
 .effects-wrapper {
     position: relative;
     p {
-        position: absolute; top: 30%; left: 25%; width: 50%;         
+        position: absolute; top: 30%; left: 15%; width: 70%;         
         font-size: 1.5em;
         background-color: rgba(0, 0, 0, .4); color: var(--ocean-sand);
         border-radius: 5px;         

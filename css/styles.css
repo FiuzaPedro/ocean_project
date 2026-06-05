@@ -150,6 +150,8 @@ main {
 
 /* Hero Section */
 .hero {
+    /* the bigger the perspective the less distorted it'll be*/
+    perspective: 1800px; 
     text-align: center;
     padding: 40px 0px;
     margin: auto 40px 40px;    
@@ -198,7 +200,29 @@ main {
     display: flex;    
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
+}
+@media screen and (min-width:851px) {
+    .terra {
+        transform-style: preserve-3d; transform-origin: top; animation: rotateEarth 1.5s forwards;
+    }
+}
+
+@keyframes rotateEarth {
+    0% { 
+        scale: 0.1; transform:rotateX(360deg); transform: rotateY(360deg); 
+        box-shadow: 300px 300px 10px black;
+    }
+    25% {
+        scale:0.4;box-shadow: 200px 200px 10px black;
+    }
+    50% {
+        scale: 0.6;box-shadow: 100px 100px 10px black;
+    }
+    75% {
+        scale:0.8;box-shadow: 50px 50px 5px black;
+    }
+    100%{rotate: 0deg; scale: 1; box-shadow: 1px 1px 0px black;} 
 }
 
 .statement-card {
