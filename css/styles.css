@@ -204,25 +204,41 @@ main {
 }
 @media screen and (min-width:851px) {
     .terra {
-        transform-style: preserve-3d; transform-origin: top; animation: rotateEarth 1.5s forwards;
+        transform-style: preserve-3d; transform-origin: top; animation: rotateEarth 2s both;
     }
 }
 
 @keyframes rotateEarth {
     0% { 
         scale: 0.1; transform:rotateX(360deg); transform: rotateY(360deg); 
-        box-shadow: 300px 300px 10px black;
+        /* -webkit-box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), 0px 9px 0px 6px rgba(0,0,0,0.1), 0px 12px 0px 8px rgba(0,0,0,0.1), 0px 15px 0px 10px rgba(0,0,0,0.1), 0px 18px 0px 12px rgba(0,0,0,0.1), 0px 21px 0px 14px rgba(0,0,0,0.1), 0px 24px 0px 16px rgba(0,0,0,0.1), 0px 27px 0px 18px rgba(0,0,0,0.1), 0px 30px 0px 20px rgba(0,0,0,0.1), 5px 5px 15px 5px rgba(0,0,0,0);  */
+    box-shadow: 
+        0px 30px 0px 100px rgba(0,0,0,0.6), 
+        0px 6px 0px 200px rgba(0,0,0,0.6), 
+        0px 9px 0px 300px rgba(0,0,0,0.6),
+        0px 12px 0px 400px rgba(0,0,0,0.6), 
+        0px 15px 0px 500px rgba(0,0,0,0.6), 
+        0px 18px 0px 600px rgba(0,0,0,0.6), 
+        0px 21px 0px 700px rgba(0,0,0,0.6), 
+        0px 24px 0px 800px rgba(0,0,0,0.6), 
+        0px 27px 0px 900px rgba(0,0,0,0.6), 
+        0px 30px 0px 1000px rgba(0,0,0,0.6), 
+        5px 5px 15px 1100px rgba(0,0,0,0);
+
     }
     25% {
-        scale:0.4;box-shadow: 200px 200px 10px black;
+        scale:0.4;
+        /* box-shadow: 200px 200px 10px black, 100px 100px 10px black; */
     }
     50% {
-        scale: 0.6;box-shadow: 100px 100px 10px black;
+        scale: 0.6;
+        /* box-shadow: 100px 100px 10px black, 50px 50px 10px black;; */
     }
     75% {
-        scale:0.8;box-shadow: 50px 50px 5px black;
+        scale:0.8;
+        /* box-shadow: 50px 50px 5px black, 25px 25px 10px black; */
     }
-    100%{rotate: 0deg; scale: 1; box-shadow: 1px 1px 0px black;} 
+    100%{ scale: .9; box-shadow: 1px 1px 0px black;} 
 }
 
 .statement-card {
