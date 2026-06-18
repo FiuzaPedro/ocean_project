@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceano: A sua poluição</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/quiz-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
+</head>
+<body class="animate__animated  animate__fadeIn">
+    <!-- div.main-container>(div.left-container>h3+(div.question-container*3>h4+(div.options>a>div*4>span+p)))+(div.right-container) -->
+    <div class="main-container">
+
+        <div class="left-container">
+            <div class="points-container">
+                <span><i class="fa-solid fa-trophy"></i></span>
+                <p><span class="counter"></span> pontos</p>
+            </div>
+            <div class="question-container">
+                <h2>Onde ocorre a corrente do Golfo?</h2>
+                <div class="options">
+                    <a href="#">
+                        <div>
+                            <span></span>
+                            <p class="true">Ao longo da Costa Oriental dos Estados Unidos</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="false">Na zona tropical do Pacífico</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="false">Ao largo da zona Ocidental do Pacífico</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="false">Ao largo da costa Ocidental de África</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="question-container">
+                <h2>Onde surge o fenómeno do El Niño?</h2>
+                <div class="options">
+                    <a href="#">
+                        <div>
+                            <span></span>
+                            <p class="false">Na zona norte do Atlântico</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="true">Na zona tropical do Pacífico</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="false">Na zona sul do Índico</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="false">Ao largo da costa Ocidental de África</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="question-container">
+                <h2>As marés são geradas por?</h2>
+                <div class="options">
+                    <a href="">
+                        <div>
+                            <span></span>
+                            <p class="false">Acção do vento</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="false">Efeitos do fundo do mar</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="true">Acção conjunta do Sol e da Lua</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p class="false">Existência da zona costeira</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="graph-wrapper">
+                <div class="glass"></div>
+                <img class="answer1" id="gulf-img" src="./img/gulf-pexels-zelch-30596212.jpg" alt="satellite image of Usa">
+                <p style="visibility:hidden; height: 0; width: 0;">Foto de Cuong 3 Mat: https://www.pexels.com/pt-br/foto/mar-natureza-praia-litoral-20521011/</p>
+                <img class="answer2" id="el-nino" src="./img/elnino-pexels-pixabay-207216.jpg" alt="el nino example image">
+                <p style="visibility:hidden; height: 0; width: 0;">Foto de Pixabay: https://www.pexels.com/pt-br/foto/ceu-claro-sobre-corpo-d-agua-207216/</p>
+                <img class="answer3" id="mares" src="./img/mares-pexels-cuong-3-mat-202978539-20521011.jpg" alt="tides example image">                
+                <p style="visibility:hidden; height: 0; width: 0;">Foto de Zelch Csaba: https://www.pexels.com/pt-br/foto/america-do-norte-30596212/</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script/quiz.js"></script>
+    <!-- <script src="./script/script.js"></script> -->
+    <!-- <script src="./script/translations.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/conflict-detection.min.js" integrity="sha512-9a/O7xs5VCV2iW8dxl1fxKmsE78LxTWxdWHbGF+k/lbPJAXAF1fCfPYb/GyoqpiaKfGjicH8SlLJkhyQMN+7SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+</body>
+</html>

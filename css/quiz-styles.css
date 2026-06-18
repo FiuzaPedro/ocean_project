@@ -1,0 +1,267 @@
+/* :root {
+    --ocean-dark: #0a1628;
+    --ocean-deep: #1a3a5c;
+    --ocean-blue: #2d6a9f;
+    --ocean-light: #4a90c2;
+    --ocean-cyan: #00bcd4;
+    --ocean-teal: #008080;
+    --ocean-foam: #e0f7fa;
+    --ocean-sand: #f5f5dc;
+    --ocean-coral: #ff7f50;
+    --ocean-white: #ffffff;
+    --ocean-gray: #b0bec5;
+} */
+/* Quiz functionality styles */
+body {
+    /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); */
+    background: var(--ocean-cyan);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.main-container {
+    max-width: 1200px;
+    padding: 20px; border-radius: 5px;
+    outline: 2px inset var(--ocean-foam);
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: var(--ocean-deep);    
+}
+.left-container {
+    flex: 1;
+    min-width: 300px;
+}
+.points-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 15px 30px;
+    width: fit-content;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+.points-container span {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+.points-container p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+}
+.counter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+.question-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.question-container.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.question-container h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.options a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.options > a > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.options > a > div:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+.options > a > div span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+}
+.options > a > div p {
+    margin: 0;
+    font-size: 0.95rem;
+    text-transform: none;
+}
+.options > a > div.correct {
+    background: rgba(0, 255, 0, 0.3);
+    border-color: #00ff00;
+}
+.options > a > div.correct span {
+    background: #00ff00;
+    color: white;
+}
+.options > a > div.incorrect {
+    background: rgba(255, 0, 0, 0.3);
+    border-color: #ff0000;
+}
+.options > a > div.incorrect span {
+    background: #ff0000;
+    color: white;
+}
+.options > a > div.answered-correct {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+}
+.options > a > div.answered-correct span {
+    background: #00ff00;
+    color: white;
+}
+.options > a > div.answered-incorrect {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: #ff0000;
+}
+.options > a > div.answered-incorrect span {
+    background: #ff0000;
+    color: white;
+}
+.right-container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.graph-wrapper {
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+}
+.graph-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.graph-wrapper img.active {
+    opacity: 1;
+}
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: opacity 0.5s ease;
+    z-index: 10;
+}
+.glass.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.question-container.answered .options a {
+    pointer-events: none;
+}
+.next-button {
+    display: block;
+    width: 100%;
+    padding: 15px 30px;
+    margin-top: 20px;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 167, 199, 1) 55%, rgba(83, 227, 237, 1) 93%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+.next-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+.completion-message {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.completion-message.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.completion-message h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+.completion-message p {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.restart-button {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+.restart-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .question-container { margin-bottom: 0; order: 2;}
+    .graph-wrapper {
+        width: 100%;
+        height: 250px;
+        order: 1;
+    }
+}
