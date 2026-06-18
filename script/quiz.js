@@ -73,7 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>A sua pontuação: ${score} de ${totalQuestions}</p>
             <button onclick="location.reload()" class="restart-button">Reiniciar Quiz</button>
         `;
-        
+        if (score === totalQuestions) {
+            new Audio('./audio/freesound_community-goodresult-82807.mp3').play();
+        }
         // Hide all questions
         questionContainers.forEach(container => {
             container.style.display = 'none';
@@ -110,9 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     counter.textContent = score;
                     this.classList.add('answered-correct');
                     span.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    new Audio('./audio/chrisiex1-correct-156911.mp3').play();
                 } else {
                     this.classList.add('answered-incorrect');
                     span.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                    new Audio('./audio/tuomas_data-wrong-answer-21-199825.mp3').play();
                     
                     // Highlight the correct answer
                     if (correctAnswer) {
