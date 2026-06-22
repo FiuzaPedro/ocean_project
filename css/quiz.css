@@ -1,7 +1,3 @@
-
-body {
-    /* background: ; */
-}
 a {text-decoration: none; text-transform: uppercase; color: white; font-weight: bold;}
 h2,h3,h4 {text-transform: uppercase;}
 .main-container {
@@ -26,4 +22,21 @@ h2,h3,h4 {text-transform: uppercase;}
         position: absolute;
         width: 200px;    
     }
+}
+
+.answer-info {
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    top: 5px;
+    left: 5%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);    
+}
+
+.answer-info.isActive {
+    z-index: 9999999;
 }
