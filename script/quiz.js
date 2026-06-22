@@ -11,6 +11,7 @@ var array_infos =
     'Os gases da atmosfera com efeito de estufa são, fundamentalmente, o vapor de água, o dióxido de carbono, o metano, o ozono, o óxido nitroso, os Clorofluorcarbonetos. Eles são praticamente transparentes para a radiação solar (pequeno comprimento de onda) mas absorvem grande parte da radiação do Globo (grandes comprimentos de onda), não deixando que esta escape para fora da atmosfera. A temperatura da superfície do Globo, na ausência do efeito de estufa, seria -18oC; o aquecimento devido ao efeito de estufa corresponde a 33oC e portanto a temperatura média observada é cerca de 15ºC'
 ];
 var info_text = document.getElementById('answer-info');
+var graph_wrapper = document.querySelector('.graph-wrapper');
 document.addEventListener('DOMContentLoaded', function() {
     const questionContainers = document.querySelectorAll('.question-container');
     const glass = document.querySelector('.glass');
@@ -103,8 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     questionContainers.forEach((container, index) => {
         const options = container.querySelectorAll('.options > a > div');
         const correctAnswer = container.querySelector('.true');
-        const answerImage = images[index];        
-        
+        const answerImage = images[index];                
 
         // Add click event to each option
         options.forEach(option => {
@@ -138,15 +138,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         info_text.classList.add('isActive');
                         info_text.innerText = array_infos[4] 
                         break;
-                    case "question6":
+                    case "question6":                        
                         info_text.classList.add('isActive');
-                        info_text.innerText = array_infos[5] 
+                        info_text.innerText = array_infos[5]; 
                         break;
-                    case "question7":
+                    case "question7":                        
                         info_text.classList.add('isActive');
-                        info_text.innerText = array_infos[6] 
+                        info_text.innerText = array_infos[6];
+                        graph_wrapper.style.filter = "blur(0px)"; 
                         break;
-                    case "question8":
+                    case "question8":                        
                         info_text.classList.add('isActive');
                         info_text.innerText = array_infos[7] 
                         break;
@@ -195,9 +196,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Next button click handler
-    nextButton.addEventListener('click', function() {
+    nextButton.addEventListener('click', function() {        
         currentQuestionIndex++;
         showQuestion(currentQuestionIndex);
+        if (currentQuestionIndex === 6) {
+            graph_wrapper.style.filter = "blur(10px)";
+        } 
         nextButton.style.display = 'none';
         info_text.classList.remove('isActive');
     });

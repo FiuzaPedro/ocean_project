@@ -157,6 +157,7 @@ body {
     align-items: center;
 }
 .graph-wrapper {
+    transition: .5s ease-in-out all;
     width: 300px;
     height: 350px;
     border: 2px solid rgba(255, 255, 255, 0.2);
