@@ -40,3 +40,33 @@ h2,h3,h4 {text-transform: uppercase;}
 .answer-info.isActive {
     z-index: 9999999;
 }
+
+
+/* result box styles */
+.result-box {
+    border-radius: 10px;
+    transition: 1s ease-in-out all;
+    position: fixed;    
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    z-index: 99999999999999;
+    /* z-index: -1; */
+    background-color: rgba(255, 255, 255, .8);
+    & span { font-size: 40px; display: none;}
+    & p { font-size: 20px; font-weight: bold; font-family:cursive; }
+    /* cores a usar: quando mau-> orangered, terrivel-> red, medio->  teal, success-> lime */
+}
+.active-box {
+    z-index: 99999999999999;
+}
+
+@media screen and (max-width: 850px) {
+    .result-box {
+        width: 80%;
+        left: 10%;
+        top: 45%;
+    }
+}

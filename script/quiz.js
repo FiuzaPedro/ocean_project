@@ -82,6 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showCompletionMessage() {
+        let result_box = document.querySelector('.result-box'), 
+            result_text = document.getElementById('result-text');
+        result_box.style.opacity = 1;
         const completionDiv = document.createElement('div');
         completionDiv.className = 'completion-message fade-in';
         completionDiv.innerHTML = `
@@ -89,8 +92,24 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>A sua pontuação: ${score} de ${totalQuestions}</p>
             <button onclick="location.reload()" class="restart-button">Reiniciar Quiz</button>
         `;
+        // é aqui que faço o código para alterar a result-box e result-text
         if (score === totalQuestions) {
-            new Audio('./audio/freesound_community-goodresult-82807.mp3').play();
+            new Audio('./audio/freesound_community-goodresult-82807.mp3').play();            
+            result_text.style.color = "lime";
+            result_text.innerText = "Magnífico resultado!";
+            document.getElementById('perfeito').style.display = "block";
+        } else if ( score > 4) {
+            result_text.style.color = "teal";
+            result_text.innerText = "Bom resultado!";
+            document.getElementById('medio').style.display = "block";
+        } else if( score < 4 && score > 1) {
+            result_text.style.color = "orangered";
+            result_text.innerText = "Resultado algo desapontante! Tente de novo!";
+            document.getElementById('desapontante').style.display = "block";
+        } else {
+            result_text.style.color = "red";
+            result_text.innerText = "Terrível!";
+            document.getElementById('terrivel').style.display = "block";
         }
         // Hide all questions
         questionContainers.forEach(container => {
@@ -99,6 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show completion message
         document.querySelector('.left-container').appendChild(completionDiv);
+        setTimeout(() => {
+            result_box.style.opacity = 0;            
+            result_box.style.marginLeft = "-100%";
+            // document.querySelector('.right-container').style.display = "none"
+        }, 6000);
     }
 
     questionContainers.forEach((container, index) => {

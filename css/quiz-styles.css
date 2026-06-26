@@ -265,4 +265,13 @@ body {
         height: 300px;
         order: 1;
     }
+    .answer-info {
+        top: 20px;
+    }    
+    .options > a > div  {
+        justify-content: space-between;
+        & p {
+            width: 80%;
+        }
+    }
 }
