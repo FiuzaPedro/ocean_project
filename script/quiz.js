@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('desapontante').style.display = "block";
         } else {
             result_text.style.color = "red";
-            result_text.innerText = "Terrível!";
+            result_text.innerText = "Terrível resultado! Procure informar-se sobre os Oceanos";
             document.getElementById('terrivel').style.display = "block";
         }
         // Hide all questions
